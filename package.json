@@ -1,5 +1,5 @@
 {
-  "name": "magicWebEngine",
+  "name": "magic-web-engine",
   "version": "0.0.1",
   "description": "A react library developed with dumi",
   "module": "dist/index.js",
