@@ -1,8 +1,5 @@
 # magicWebEngine
 
-[![NPM version](https://img.shields.io/npm/v/magicWebEngine.svg?style=flat)](https://npmjs.org/package/magicWebEngine)
-[![NPM downloads](http://img.shields.io/npm/dm/magicWebEngine.svg?style=flat)](https://npmjs.org/package/magicWebEngine)
-
 A react library developed with dumi
 
 ## Usage
