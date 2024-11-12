@@ -73,9 +73,9 @@
     "@types/react-dom": "^18.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "@formily/antd": "^2.3.2",
-    "@formily/core": "^2.3.2",
-    "@formily/react": "^2.3.2",
+    "@muidea/formily-antd": "2.3.2",
+    "@muidea/formily-core": "2.3.2",
+    "@muidea/formily-react": "2.3.2",
     "antd": "^4.24.16",
     "babel-plugin-import": "^1.13.8",
     "moment": "^2.30.1"

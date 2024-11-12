@@ -3,9 +3,9 @@
  */
 
 import React from 'react'
-import { createForm } from '@formily/core'
-import { createSchemaField } from '@formily/react'
-import { Form, FormItem, Input, Password, Submit } from '@formily/antd'
+import { createForm } from '@muidea/formily-core'
+import { createSchemaField } from '@muidea/formily-react'
+import { Form, FormItem, Input, Password, Submit } from '@muidea/formily-antd'
 import { Tabs, Card } from 'antd'
 import * as ICONS from '@ant-design/icons'
 import { VerifyCode } from './VerifyCode'
@@ -26,11 +26,12 @@ const SchemaField = createSchemaField({
     VerifyCode,
   },
   scope: {
-    icon(name) {
-      return React.createElement(ICONS[name])
+    icon(name: string | number) {
+      // @ts-ignore
+      return React.createElement(ICONS[name]);
     },
   },
-})
+});
 
 const normalSchema = {
   type: 'object',

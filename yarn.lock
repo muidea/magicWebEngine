@@ -1180,100 +1180,6 @@
     intl-messageformat "10.7.6"
     tslib "2"
 
-"@formily/antd@^2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@formily/antd/-/antd-2.3.2.tgz#bb73bfbdcea227a799ad7adf7ca12d5746fe9f78"
-  integrity sha512-bNmcvrxOgqu2jYwGv1nuDzd5IKOMISVWBN2kU29iIfDjOgIzopDzYIjSfmJ4LPvnzovYO88EPVz9OCGPCE+dkw==
-  dependencies:
-    "@dnd-kit/core" "^6.0.0"
-    "@dnd-kit/sortable" "^7.0.0"
-    "@formily/core" "2.3.2"
-    "@formily/grid" "2.3.2"
-    "@formily/json-schema" "2.3.2"
-    "@formily/react" "2.3.2"
-    "@formily/reactive" "2.3.2"
-    "@formily/reactive-react" "2.3.2"
-    "@formily/shared" "2.3.2"
-    classnames "^2.2.6"
-    react-sticky-box "^0.9.3"
-
-"@formily/core@2.3.2", "@formily/core@^2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@formily/core/-/core-2.3.2.tgz#72e5e5e75cb2eb84d6058557aa5a5e8d86ff0abc"
-  integrity sha512-qS02mKWDRdm5IYnx3b6L4i/i7oFEBbVotF6B3xdqgbkeSjdzSz81/aJnEr0Sbi3yCgh1FhA0x+QKkpWnE8/GDQ==
-  dependencies:
-    "@formily/reactive" "2.3.2"
-    "@formily/shared" "2.3.2"
-    "@formily/validator" "2.3.2"
-
-"@formily/grid@2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@formily/grid/-/grid-2.3.2.tgz#452c1a63724bada7ef2ecd714f1fb17dfaef89ed"
-  integrity sha512-cbPBOZKHT5xp3DIcn+Tsqm9B2VMWDsfnhbGl7qvKza8v7cDn7io2aFp8a7sQTeZVmRT+A8H30LjCAKJS9n6+2w==
-  dependencies:
-    "@formily/reactive" "2.3.2"
-    "@juggle/resize-observer" "^3.3.1"
-
-"@formily/json-schema@2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@formily/json-schema/-/json-schema-2.3.2.tgz#38dbf38d45586bd99b77517a90b2115fedfb0ea8"
-  integrity sha512-DFsdrbxFvdxUtrD5mVRb8USUWJV6KkhSiz83wxA779lgntGDLrwuE0DI2dVg8Vm4dZsK79iB+XhWidaNqH41fQ==
-  dependencies:
-    "@formily/core" "2.3.2"
-    "@formily/reactive" "2.3.2"
-    "@formily/shared" "2.3.2"
-
-"@formily/path@2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@formily/path/-/path-2.3.2.tgz#9385d9ba1eabd5e3ed916f2b1953be6257bb192e"
-  integrity sha512-KK8h/CupHOs4HIgu9JucqwWvIr8Nbmof++Kby0NdNFHdTN5nAyVzStS8VEPFPGRkQaXV3AH+FVGAxgucmEy4ZA==
-
-"@formily/react@2.3.2", "@formily/react@^2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@formily/react/-/react-2.3.2.tgz#0804d67dda8cb0b2fa9948453e0f28c1d5c69381"
-  integrity sha512-p0jCtX2K9b2/OUdXcDGJhRX4gU4zGFXg1uOYd49iqV1EP+XhRa/4OGAz7QMnUP0K/3FVLboqbQS2nMOKY1rrPg==
-  dependencies:
-    "@formily/core" "2.3.2"
-    "@formily/json-schema" "2.3.2"
-    "@formily/reactive" "2.3.2"
-    "@formily/reactive-react" "2.3.2"
-    "@formily/shared" "2.3.2"
-    "@formily/validator" "2.3.2"
-    hoist-non-react-statics "^3.3.2"
-
-"@formily/reactive-react@2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@formily/reactive-react/-/reactive-react-2.3.2.tgz#68e7196f60b06eaf8d4a6df0b67bc3165478c2cf"
-  integrity sha512-SdlKSDbUzgddasDnuUugWR02AGC426jHhc7UJuUU1W4ORAuYQunqdMu7xB7/aF4OAVCw4j6KECQtIPo4kftkFg==
-  dependencies:
-    "@formily/reactive" "2.3.2"
-    hoist-non-react-statics "^3.3.2"
-
-"@formily/reactive@2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@formily/reactive/-/reactive-2.3.2.tgz#8cb7aa90e7912d68cf5e6544a28ce880c62185f6"
-  integrity sha512-fw9EBWyBNSo3d1diX+HW3v6fBYqmn5zRM+L8le03XGft847LaajCYkjXiZXSzj7v8U4qzjhURIcqVYgmi4OW8g==
-
-"@formily/shared@2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@formily/shared/-/shared-2.3.2.tgz#1cea158491280a267278e0c9dc4f6cc7a69d4485"
-  integrity sha512-hb8eL28Dqe4WQzGtxC3h7OwG9VPPBXtfKUfmnRkaBMJ8zn2KmdYOP8YnAkwdO2ZMgxtkOl0hku0Ufm2PwP3ziA==
-  dependencies:
-    "@formily/path" "2.3.2"
-    camel-case "^4.1.1"
-    lower-case "^2.0.1"
-    no-case "^3.0.4"
-    param-case "^3.0.4"
-    pascal-case "^3.1.1"
-    upper-case "^2.0.1"
-
-"@formily/validator@2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@formily/validator/-/validator-2.3.2.tgz#102d0f4222fa986c884a8fb998e0e1b8dc22e8cf"
-  integrity sha512-XoY31kUypHB8MIw9jhp/Pb0fDFan5wPhR9Hgz/HiTPUdpg8l7kxzHRMZieqtL4YbtFzJD4wpk1+XrylILpPGYg==
-  dependencies:
-    "@formily/shared" "2.3.2"
-
 "@humanwhocodes/config-array@^0.13.0":
   version "0.13.0"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.13.0.tgz#fb907624df3256d04b9aa2df50d7aa97ec648748"
@@ -1506,6 +1412,100 @@
   version "0.14.2"
   resolved "https://registry.yarnpkg.com/@microsoft/tsdoc/-/tsdoc-0.14.2.tgz#c3ec604a0b54b9a9b87e9735dfc59e1a5da6a5fb"
   integrity sha512-9b8mPpKrfeGRuhFH5iO1iwCLeIIsV6+H1sRfxbkoGXIyQE2BTsPd9zqSqQJ+pv5sJ/hT5M1zvOFL02MnEezFug==
+
+"@muidea/formily-antd@2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@muidea/formily-antd/-/formily-antd-2.3.2.tgz#81122b485535307758da00e4384c3dbef79da202"
+  integrity sha512-+raAwAvIl40xwDAtRSoZFMJ9aCDjkoWIFNwLNb2wsaYYbGDmYS6MXBrZvip0s0rA7AUS2kNU3wBnZmlJRxgQ0A==
+  dependencies:
+    "@dnd-kit/core" "^6.0.0"
+    "@dnd-kit/sortable" "^7.0.0"
+    "@muidea/formily-core" "2.3.2"
+    "@muidea/formily-grid" "2.3.2"
+    "@muidea/formily-json-schema" "2.3.2"
+    "@muidea/formily-react" "2.3.2"
+    "@muidea/formily-reactive" "2.3.2"
+    "@muidea/formily-reactive-react" "2.3.2"
+    "@muidea/formily-shared" "2.3.2"
+    classnames "^2.2.6"
+    react-sticky-box "^0.9.3"
+
+"@muidea/formily-core@2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@muidea/formily-core/-/formily-core-2.3.2.tgz#6e66625e1e982b7c2976de67c427cb59fb714202"
+  integrity sha512-2z4eQ6psEgvRNsPyv0IaNxQ2esMVx7zm7+5L5eUZsAPZllgYYVUSbc3JHWDOt5QLphZkE3Km22Ojl/sH+Pf01Q==
+  dependencies:
+    "@muidea/formily-reactive" "2.3.2"
+    "@muidea/formily-shared" "2.3.2"
+    "@muidea/formily-validator" "2.3.2"
+
+"@muidea/formily-grid@2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@muidea/formily-grid/-/formily-grid-2.3.2.tgz#d340d59815cbe5f63276b3b5a5e1319e5071bdff"
+  integrity sha512-OuoMlUcE0nw9/vGdVhNzV9+pnFDZ6gCj80XAHrT6xi9lJW1W7dr9DmS0u3PXtZPCOLZGch55uLE9xuyHPBrSjQ==
+  dependencies:
+    "@juggle/resize-observer" "^3.3.1"
+    "@muidea/formily-reactive" "2.3.2"
+
+"@muidea/formily-json-schema@2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@muidea/formily-json-schema/-/formily-json-schema-2.3.2.tgz#02aa23ac5ab1bb0eb81a78f81cadbe6a84a9487c"
+  integrity sha512-uJMgh+wDnuO3gFSjG4qV1dIUtuFxqYKxgj4NUcs26XOYlmismwElacjRNiqEGQSBZ6/zkGcluEyk2YBVDOg6SA==
+  dependencies:
+    "@muidea/formily-core" "2.3.2"
+    "@muidea/formily-reactive" "2.3.2"
+    "@muidea/formily-shared" "2.3.2"
+
+"@muidea/formily-path@2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@muidea/formily-path/-/formily-path-2.3.2.tgz#9f086d4048b01c437bab4db090f74413ae804f08"
+  integrity sha512-ZKy/vGg9usjmkxBJ4CUkQlaErW/AeOGSOrMfmCYcM0CT3R2Yc9oBH3JKhM4VaEGHhR/4j/lK+riVNfA9HA6TBw==
+
+"@muidea/formily-react@2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@muidea/formily-react/-/formily-react-2.3.2.tgz#de892e09bb5e835d112a4ea777ca4ce6c7b2ba82"
+  integrity sha512-Et8KcPDWy+LP1wB3b9vbOq279ti0lPCndoumcnL+h2ddAYN97q4j37+t3GWa/MFXWD+4ALNI7uxrVKlAdOIHiQ==
+  dependencies:
+    "@muidea/formily-core" "2.3.2"
+    "@muidea/formily-json-schema" "2.3.2"
+    "@muidea/formily-reactive" "2.3.2"
+    "@muidea/formily-reactive-react" "2.3.2"
+    "@muidea/formily-shared" "2.3.2"
+    "@muidea/formily-validator" "2.3.2"
+    hoist-non-react-statics "^3.3.2"
+
+"@muidea/formily-reactive-react@2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@muidea/formily-reactive-react/-/formily-reactive-react-2.3.2.tgz#8955e60c4311df8ad9a5f5e385d4e9f7ded9db89"
+  integrity sha512-6un8s54PD6mA87fMbkmrAV3s+g6ZTPIk7RCO97wJxWcL2tn9PcUZlnQU0j9yfw7n75g6JgDHAm8r3lvMRAF4Cw==
+  dependencies:
+    "@muidea/formily-reactive" "2.3.2"
+    hoist-non-react-statics "^3.3.2"
+
+"@muidea/formily-reactive@2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@muidea/formily-reactive/-/formily-reactive-2.3.2.tgz#9f3a07eef4500316ea005b1c01c7bee518da7b7f"
+  integrity sha512-zrn3XmkfT6aJgRReedjfY+YwLYWfjD+h32OZRe4Ob0IMyDlGMRU6Ag4KuRicj8azwJjO40BAfLFPnVSvkXvOsg==
+
+"@muidea/formily-shared@2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@muidea/formily-shared/-/formily-shared-2.3.2.tgz#d28babb1b65ae5e739300d3a81bd891071ba02f3"
+  integrity sha512-Qhqk/KPbPQN+Kv7g2ScTkaDTPFM1tcti2J/o3afmM2jeDHkwaHzEpEyE9rbKJk3SyK7/rh2KB6khqeN2u5cTOA==
+  dependencies:
+    "@muidea/formily-path" "2.3.2"
+    camel-case "^4.1.1"
+    lower-case "^2.0.1"
+    no-case "^3.0.4"
+    param-case "^3.0.4"
+    pascal-case "^3.1.1"
+    upper-case "^2.0.1"
+
+"@muidea/formily-validator@2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@muidea/formily-validator/-/formily-validator-2.3.2.tgz#196ee34bd5923ea04f7dfa0e113638698063cd15"
+  integrity sha512-q0k7FQvXjt+QlQjg1ye1t0gADot5/9Y9RghaKI3Ei4j4g6yCzgAXZGVGrBEA6268JtkoWetYCLZwWuQm/y5hwg==
+  dependencies:
+    "@muidea/formily-shared" "2.3.2"
 
 "@napi-rs/nice-android-arm-eabi@1.0.1":
   version "1.0.1"
