@@ -1,7 +1,3 @@
-/**
- * compact: true
- */
-
 import React from 'react'
 import { createForm } from '@muidea/formily-core'
 import { createSchemaField } from '@muidea/formily-react'
