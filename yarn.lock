@@ -1413,10 +1413,10 @@
   resolved "https://registry.yarnpkg.com/@microsoft/tsdoc/-/tsdoc-0.14.2.tgz#c3ec604a0b54b9a9b87e9735dfc59e1a5da6a5fb"
   integrity sha512-9b8mPpKrfeGRuhFH5iO1iwCLeIIsV6+H1sRfxbkoGXIyQE2BTsPd9zqSqQJ+pv5sJ/hT5M1zvOFL02MnEezFug==
 
-"@muidea/formily-antd@2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@muidea/formily-antd/-/formily-antd-2.3.2.tgz#81122b485535307758da00e4384c3dbef79da202"
-  integrity sha512-+raAwAvIl40xwDAtRSoZFMJ9aCDjkoWIFNwLNb2wsaYYbGDmYS6MXBrZvip0s0rA7AUS2kNU3wBnZmlJRxgQ0A==
+"@muidea/formily-antd@2.3.3":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@muidea/formily-antd/-/formily-antd-2.3.3.tgz#89a07873d579cf3c7ab115b59fc3fb31e9415852"
+  integrity sha512-IWiBEsNp8gui3IytdILDM6A+uPNlCEAg+gKB1Qv4AYk4JF/ka3RqUH044LOktjK1Ai6hnk2wus13p1A1GRQ6Rw==
   dependencies:
     "@dnd-kit/core" "^6.0.0"
     "@dnd-kit/sortable" "^7.0.0"
@@ -2396,43 +2396,43 @@
     "@typescript-eslint/types" "5.62.0"
     eslint-visitor-keys "^3.3.0"
 
-"@umijs/ast@4.3.31":
-  version "4.3.31"
-  resolved "https://registry.yarnpkg.com/@umijs/ast/-/ast-4.3.31.tgz#e03e0439b3afe1b22c21a1c48dfdfa8e9f3c5d79"
-  integrity sha512-5kLHFwwpB6agbU+gFVgGMzFS69IEW7EmDqAQn45DINSW8H2iy6mm9cp4G0vf4xo/vU/bLqT9+39Uz+4YtZvkEg==
+"@umijs/ast@4.3.32":
+  version "4.3.32"
+  resolved "https://registry.yarnpkg.com/@umijs/ast/-/ast-4.3.32.tgz#3321d20a6edd9e3f27a767783bce3dd0621e410e"
+  integrity sha512-9d5rgrRT7juwRVJiZKmAqv7GYoHsuysRtJnr159u5pWxIBZnJc1d7JzvQ4+trViJRzdKrjKdoFE+SxYDLazHBg==
   dependencies:
-    "@umijs/bundler-utils" "4.3.31"
+    "@umijs/bundler-utils" "4.3.32"
 
-"@umijs/babel-preset-umi@4.3.31", "@umijs/babel-preset-umi@^4.3.27":
-  version "4.3.31"
-  resolved "https://registry.yarnpkg.com/@umijs/babel-preset-umi/-/babel-preset-umi-4.3.31.tgz#7b6798c2fa454c29efa1884c5b27a3f1ed62f9fa"
-  integrity sha512-aoRRl5+FRwu5QL5cJK0kZY+rNcnvjDWJgnihBrSpUHqTu+kIX8iWQG3vb6m8qAeTSR1828XL5EsrZ37kvu/LZQ==
+"@umijs/babel-preset-umi@4.3.32", "@umijs/babel-preset-umi@^4.3.27":
+  version "4.3.32"
+  resolved "https://registry.yarnpkg.com/@umijs/babel-preset-umi/-/babel-preset-umi-4.3.32.tgz#34b72d8c00cc5020acc9d854c714d9355fcbb11f"
+  integrity sha512-s52pNKqrfaSlXMXQRSmFOibZW0il6li7/4px1ZL1CoAUsXVtJpjpWWIn64rLcSj7J5XqWlTMEEatuQamIMW8Vw==
   dependencies:
     "@babel/runtime" "7.23.6"
     "@bloomberg/record-tuple-polyfill" "0.0.4"
-    "@umijs/bundler-utils" "4.3.31"
-    "@umijs/utils" "4.3.31"
+    "@umijs/bundler-utils" "4.3.32"
+    "@umijs/utils" "4.3.32"
     core-js "3.34.0"
 
-"@umijs/bundler-esbuild@4.3.31":
-  version "4.3.31"
-  resolved "https://registry.yarnpkg.com/@umijs/bundler-esbuild/-/bundler-esbuild-4.3.31.tgz#cff706627bd9d7aa7342c048150597be0038a572"
-  integrity sha512-KgdnsKj9A00YWwrcvQCuoVpqaoviL3+yWarltkwWKInqDnHogOS30TiExAlpU0RhJIU3GNy6PVKJ/msAC/1OJA==
+"@umijs/bundler-esbuild@4.3.32":
+  version "4.3.32"
+  resolved "https://registry.yarnpkg.com/@umijs/bundler-esbuild/-/bundler-esbuild-4.3.32.tgz#c196376607e2940cf7ae3106001697a63734682d"
+  integrity sha512-9bs6qkIdeZ+6kSsf8nQyTqc2evFzWJp7AWvqS49ig1AvpwVpxdrLWDW9KgP2j8s9S9WA45MPt9wDbquZpLT+Zg==
   dependencies:
-    "@umijs/bundler-utils" "4.3.31"
-    "@umijs/utils" "4.3.31"
+    "@umijs/bundler-utils" "4.3.32"
+    "@umijs/utils" "4.3.32"
     enhanced-resolve "5.9.3"
     postcss "^8.4.21"
     postcss-flexbugs-fixes "5.0.2"
     postcss-preset-env "7.5.0"
 
-"@umijs/bundler-mako@0.9.5":
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/@umijs/bundler-mako/-/bundler-mako-0.9.5.tgz#fdf3ff9ce9104ee4b6ae6e393037873244b155df"
-  integrity sha512-i9yTP/NHdogI9BXFMRTAQ9EISH4wb2VYtlV8iUAjI+8xAw0D27VrglH1RoNZebne948m3u3dihrw6LJ66AyJmg==
+"@umijs/bundler-mako@0.9.6":
+  version "0.9.6"
+  resolved "https://registry.yarnpkg.com/@umijs/bundler-mako/-/bundler-mako-0.9.6.tgz#3c7621cb3fc182aee1cd5ca677dde1234891511e"
+  integrity sha512-7XFs2++Oxi9f7CJ86Uj06FP2lSD7La2H11HF210eikIb6wVAebOgCKNOoZ8bPW3UPAzKWQJqc2X5NnqvuM2X6w==
   dependencies:
     "@umijs/bundler-utils" "^4.0.81"
-    "@umijs/mako" "0.9.5"
+    "@umijs/mako" "0.9.6"
     chalk "^4.1.2"
     compression "^1.7.4"
     connect-history-api-fallback "^2.0.0"
@@ -2444,25 +2444,25 @@
     rimraf "5.0.1"
     webpack-5-chain "8.0.1"
 
-"@umijs/bundler-utils@4.3.31", "@umijs/bundler-utils@^4.0.81", "@umijs/bundler-utils@^4.3.0", "@umijs/bundler-utils@^4.3.27":
-  version "4.3.31"
-  resolved "https://registry.yarnpkg.com/@umijs/bundler-utils/-/bundler-utils-4.3.31.tgz#f2edc596449a41cd809b030e8bcefcd8a2f7f906"
-  integrity sha512-A2+HpPZ1LntVxpdr/rIs6ovzEbjmgcLjg94QT6V75zg44XT7iGHp+ofC5jMdTvpt5fXBxsf2Q1KKXhf9sTfqWA==
+"@umijs/bundler-utils@4.3.32", "@umijs/bundler-utils@^4.0.81", "@umijs/bundler-utils@^4.3.0", "@umijs/bundler-utils@^4.3.27":
+  version "4.3.32"
+  resolved "https://registry.yarnpkg.com/@umijs/bundler-utils/-/bundler-utils-4.3.32.tgz#d577504973aa7b8b80115ee11b853c85c8584ec5"
+  integrity sha512-IGukivcii4N/eF5Vo0KgtzvqNvbDzAFV3Ns0XPy7b4KrELhjwPGXOxHGdVn5OGqSsPxWDSkrBdY7xXoszOPHXw==
   dependencies:
-    "@umijs/utils" "4.3.31"
+    "@umijs/utils" "4.3.32"
     esbuild "0.21.4"
     regenerate "^1.4.2"
     regenerate-unicode-properties "10.1.1"
     spdy "^4.0.2"
 
-"@umijs/bundler-vite@4.3.31":
-  version "4.3.31"
-  resolved "https://registry.yarnpkg.com/@umijs/bundler-vite/-/bundler-vite-4.3.31.tgz#9bc0df75723f659c1fb44057dfa41c0dd2d068b9"
-  integrity sha512-iQVybOIbNBRTKsN/QoP20+SCpFOSxjiZbKzu9VPf5prTwLlO0/AOc/HLFpTAiBWftIBbCYEXj6KPBlcL1OxJ2g==
+"@umijs/bundler-vite@4.3.32":
+  version "4.3.32"
+  resolved "https://registry.yarnpkg.com/@umijs/bundler-vite/-/bundler-vite-4.3.32.tgz#cf6a9eb7558688206cea3ae22dcd242d2bb2c1ae"
+  integrity sha512-vMY28MS31Lp34L07OlEwJQhJbWMqhdr6vGio8ErPh1clnh37clgn99Ua5RUqm2o1xXZQBeStC7Tfsin1dFiTQA==
   dependencies:
     "@svgr/core" "6.5.1"
-    "@umijs/bundler-utils" "4.3.31"
-    "@umijs/utils" "4.3.31"
+    "@umijs/bundler-utils" "4.3.32"
+    "@umijs/utils" "4.3.32"
     "@vitejs/plugin-react" "4.0.0"
     core-js "3.34.0"
     less "4.1.3"
@@ -2471,21 +2471,21 @@
     systemjs "^6.14.1"
     vite "4.5.2"
 
-"@umijs/bundler-webpack@4.3.31", "@umijs/bundler-webpack@^4.3.27":
-  version "4.3.31"
-  resolved "https://registry.yarnpkg.com/@umijs/bundler-webpack/-/bundler-webpack-4.3.31.tgz#b32596e7eb31a72e2dcc62c10171c16d24f53b83"
-  integrity sha512-4UJrNYiax1ImET8Bk9Um+ChS1cyHFaU8QstI9INg97V1zpvAOFrIRHPUKAx/Vd5+BqUL3CX8KupkkT7laW42nQ==
+"@umijs/bundler-webpack@4.3.32", "@umijs/bundler-webpack@^4.3.27":
+  version "4.3.32"
+  resolved "https://registry.yarnpkg.com/@umijs/bundler-webpack/-/bundler-webpack-4.3.32.tgz#76184be406f2647d255dbf5792b4a693f9a127c3"
+  integrity sha512-Dc1XUzJN9lX2nyGWkyLv1K8D/UHu2M4A4VNmWjPMpBpu/kr3J9Fd/I7/vtT1Cv5MhvwtW24UyWQv4UZPJsx5oQ==
   dependencies:
     "@svgr/core" "6.5.1"
     "@svgr/plugin-jsx" "^6.5.1"
     "@svgr/plugin-svgo" "^6.5.1"
     "@types/hapi__joi" "17.1.9"
-    "@umijs/babel-preset-umi" "4.3.31"
-    "@umijs/bundler-utils" "4.3.31"
+    "@umijs/babel-preset-umi" "4.3.32"
+    "@umijs/bundler-utils" "4.3.32"
     "@umijs/case-sensitive-paths-webpack-plugin" "^1.0.1"
-    "@umijs/mfsu" "4.3.31"
+    "@umijs/mfsu" "4.3.32"
     "@umijs/react-refresh-webpack-plugin" "0.5.11"
-    "@umijs/utils" "4.3.31"
+    "@umijs/utils" "4.3.32"
     cors "^2.8.5"
     css-loader "6.7.1"
     es5-imcompatible-versions "^0.1.78"
@@ -2503,13 +2503,13 @@
   resolved "https://registry.yarnpkg.com/@umijs/case-sensitive-paths-webpack-plugin/-/case-sensitive-paths-webpack-plugin-1.0.1.tgz#02655299f52912289f2df28fbeaea636e748c1df"
   integrity sha512-kDKJ8yTarxwxGJDInG33hOpaQRZ//XpNuuznQ/1Mscypw6kappzFmrBr2dOYave++K7JHouoANF354UpbEQw0Q==
 
-"@umijs/core@4.3.31", "@umijs/core@^4.3.0", "@umijs/core@^4.3.27":
-  version "4.3.31"
-  resolved "https://registry.yarnpkg.com/@umijs/core/-/core-4.3.31.tgz#aa385ded18447ecd6356d5b183bf9e76725ef8b7"
-  integrity sha512-vUwa4WNyrQijvk23JEP8cGKdSYasRtPwMELanBbsmh+5N2Oratn5ST4DBCstrq90o28RPnAl7XJ2nJkWQgY8hQ==
+"@umijs/core@4.3.32", "@umijs/core@^4.3.0", "@umijs/core@^4.3.27":
+  version "4.3.32"
+  resolved "https://registry.yarnpkg.com/@umijs/core/-/core-4.3.32.tgz#730f670820dd7be8fb60fa1e714f3881254dfcfd"
+  integrity sha512-b0JKIK1HbhO4KrpmVlDo+dHIE/LkLKLe3a7imGxVlzPCpUE4/vGqUGtq66b0spxVCr/cHR7tJL1w2qNvc9M+LA==
   dependencies:
-    "@umijs/bundler-utils" "4.3.31"
-    "@umijs/utils" "4.3.31"
+    "@umijs/bundler-utils" "4.3.32"
+    "@umijs/utils" "4.3.32"
 
 "@umijs/did-you-know@1.0.3":
   version "1.0.3"
@@ -2584,17 +2584,17 @@
     "@babel/runtime" "^7.7.6"
     query-string "^6.13.6"
 
-"@umijs/lint@4.3.31", "@umijs/lint@^4.0.0":
-  version "4.3.31"
-  resolved "https://registry.yarnpkg.com/@umijs/lint/-/lint-4.3.31.tgz#177d768c6bb599c8401fdcd33baa0b1134462707"
-  integrity sha512-cPLC0o9tDhyOhRp5N1fPciL2u5eEKCZFfkKTd7MtgmSZ7wl0T9X8aMLzjtuq4hNQ6CtXje/dOHDVW8lYfMzLAA==
+"@umijs/lint@4.3.32", "@umijs/lint@^4.0.0":
+  version "4.3.32"
+  resolved "https://registry.yarnpkg.com/@umijs/lint/-/lint-4.3.32.tgz#881e2efa238b7f911520054299d81d2e518ec59d"
+  integrity sha512-5S6dwli253vAEDLc5DcJEb7cnTSRkeRRBZ/Znsifx2247Y3HePILW5guXX5lsIvD0Yep5ok9u5IvihxQ3G0Rvg==
   dependencies:
     "@babel/core" "7.23.6"
     "@babel/eslint-parser" "7.23.3"
     "@stylelint/postcss-css-in-js" "^0.38.0"
     "@typescript-eslint/eslint-plugin" "^5.62.0"
     "@typescript-eslint/parser" "^5.62.0"
-    "@umijs/babel-preset-umi" "4.3.31"
+    "@umijs/babel-preset-umi" "4.3.32"
     eslint-plugin-jest "27.2.3"
     eslint-plugin-react "7.33.2"
     eslint-plugin-react-hooks "4.6.0"
@@ -2602,50 +2602,50 @@
     postcss-syntax "0.36.2"
     stylelint-config-standard "25.0.0"
 
-"@umijs/mako-darwin-arm64@0.9.5":
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/@umijs/mako-darwin-arm64/-/mako-darwin-arm64-0.9.5.tgz#b4ec6c807aec44419b5bfcedc62283097660b859"
-  integrity sha512-2WCIp8ypVgIqXb8KS/pOp/elQYkT4bcqTLHsQx7FsMVS4iTDH3bIIfr2PbdBN6fgXZAZViync5kdk/vouy0zAA==
+"@umijs/mako-darwin-arm64@0.9.6":
+  version "0.9.6"
+  resolved "https://registry.yarnpkg.com/@umijs/mako-darwin-arm64/-/mako-darwin-arm64-0.9.6.tgz#c9962ae25aa13e471d11feb89028617cad190cd6"
+  integrity sha512-AvYzWOornkq4LUio4RSMWmWwjceyH1CTNzyia85RYYLnjT+JaJZsJVF2R9CyFSDaaM80uoQLihCB2u/Tl87BQg==
 
-"@umijs/mako-darwin-x64@0.9.5":
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/@umijs/mako-darwin-x64/-/mako-darwin-x64-0.9.5.tgz#f18ff31ad84e881e00009291ef29e968ca55fed5"
-  integrity sha512-DmubJdeQSmIdwIihvj5xmammm6erqgEUl/hxaBEKxTL/xuoFh8KXTCt8Q/Avk/M/o+tlSF6ffXQYCgTB+M2XeA==
+"@umijs/mako-darwin-x64@0.9.6":
+  version "0.9.6"
+  resolved "https://registry.yarnpkg.com/@umijs/mako-darwin-x64/-/mako-darwin-x64-0.9.6.tgz#3ca37d79042be013b8c3c4e02a557dd0dd7ee530"
+  integrity sha512-t/PHtUFdt8sUcoTQ5VxUV6RnA/aOsvYXe250CnmZQwM7EqNStuQQ1FyhoGQj1XV94WRGSmKb36ISjO4svaLP1Q==
 
-"@umijs/mako-linux-arm64-gnu@0.9.5":
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/@umijs/mako-linux-arm64-gnu/-/mako-linux-arm64-gnu-0.9.5.tgz#cc5f23b70dcd7f52a96b712e86cca983c427de15"
-  integrity sha512-XXIwvHtsEkXvVFnWw4UCjFcbXvFOiq7SHFb4Puxd8zmROr5/dxrhukn9ta43VePMhb34mCdgWaC3vVITIz5DEg==
+"@umijs/mako-linux-arm64-gnu@0.9.6":
+  version "0.9.6"
+  resolved "https://registry.yarnpkg.com/@umijs/mako-linux-arm64-gnu/-/mako-linux-arm64-gnu-0.9.6.tgz#b3aec737f02451f23c3900faf4558ff42372af4d"
+  integrity sha512-9eL3o3uVSEhUbkdsesv1rBjqtP3XfKrwsfgLsaPvJqgbORBeWOsppmWjNotmJsbxKaQIZBJeb3ZxxrD9iYpW/g==
 
-"@umijs/mako-linux-arm64-musl@0.9.5":
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/@umijs/mako-linux-arm64-musl/-/mako-linux-arm64-musl-0.9.5.tgz#24c096f46099b99e231f59902ae19476eed588b6"
-  integrity sha512-Hwg44bT5FCP5AcQ0IpMzTDP4hypaB6KoNrG2QVeqxhnkitXkixpsex09vkaPYXrY5bQu/MkNoJCJDnhEJp/v/Q==
+"@umijs/mako-linux-arm64-musl@0.9.6":
+  version "0.9.6"
+  resolved "https://registry.yarnpkg.com/@umijs/mako-linux-arm64-musl/-/mako-linux-arm64-musl-0.9.6.tgz#dbfe91f3181bf49aaa2dc2e6e85c6da1b4afab6c"
+  integrity sha512-7ozS0sK5wyWqge0I8vSNF1oO2OssXMMoHgj9u5i+7dHY/ayyBx+xB/PbnVYofMJOmZUKjEnFezK62llUaeF/4w==
 
-"@umijs/mako-linux-x64-gnu@0.9.5":
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/@umijs/mako-linux-x64-gnu/-/mako-linux-x64-gnu-0.9.5.tgz#f3137e701a913301d5ede301d2bf87c6ea678cd0"
-  integrity sha512-Dd+D9F/KVWnxVyKr/66kxscIKIVUMEFKrevZ10Z+VbiRmokXeTUNJkxfZ2tIj9h/pHqgVbSUykyWon1dQsQRlw==
+"@umijs/mako-linux-x64-gnu@0.9.6":
+  version "0.9.6"
+  resolved "https://registry.yarnpkg.com/@umijs/mako-linux-x64-gnu/-/mako-linux-x64-gnu-0.9.6.tgz#98f3c41feda63cb792f57fe8c061050abd3e5e99"
+  integrity sha512-sMfgQcurFOOXGtV/+4vJQu+iAmJ4RDb6J+3m464cKvnBDNM9I+Ye7UGhO+krJZbPN2EheliEN5AWcvKILQeEeA==
 
-"@umijs/mako-linux-x64-musl@0.9.5":
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/@umijs/mako-linux-x64-musl/-/mako-linux-x64-musl-0.9.5.tgz#fac86133fabdbc342a8a0c7c7683611f1d5c4067"
-  integrity sha512-Aoj2pbdKg1NTHWd9vFNQiNHPeBo6gszTZSOJq9N44wI6dS92OuWd0z/NNG0LAu+fb2rMD3fCr1zHJbO7ietNxw==
+"@umijs/mako-linux-x64-musl@0.9.6":
+  version "0.9.6"
+  resolved "https://registry.yarnpkg.com/@umijs/mako-linux-x64-musl/-/mako-linux-x64-musl-0.9.6.tgz#a09e1102381ba2c83f5fed3f0e931921c493c99c"
+  integrity sha512-uDfMGIbH2mq1HoQOeUmQqqBf4emcG3y0s9dKQu3P9sW93EWK35qUHBfuhYeRP7d6/ljfNhB35Bqe6SHU/KV4cw==
 
-"@umijs/mako-win32-ia32-msvc@0.9.5":
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/@umijs/mako-win32-ia32-msvc/-/mako-win32-ia32-msvc-0.9.5.tgz#1a56032226e3c74f80e9a54ada4fb5abb7fa9274"
-  integrity sha512-JjePjho+TzgeB02s6oXG8KEpjOojwSFtv3vS0xJhKO0SPv4j7zk0s+5KNv3ZLy2Hx1hKITvmtoQFx6CAmFrKEQ==
+"@umijs/mako-win32-ia32-msvc@0.9.6":
+  version "0.9.6"
+  resolved "https://registry.yarnpkg.com/@umijs/mako-win32-ia32-msvc/-/mako-win32-ia32-msvc-0.9.6.tgz#c06ddc9bb42f43614f6162dc9614f117cbd83219"
+  integrity sha512-h7nRPSD77sQAFFd5IyGa8+qctrbU4/QHsfPXZeikYDM9TvqkK7Z61Aixcm5YgAFmyKgtftHJZc7BEOHMoYu7QQ==
 
-"@umijs/mako-win32-x64-msvc@0.9.5":
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/@umijs/mako-win32-x64-msvc/-/mako-win32-x64-msvc-0.9.5.tgz#7e3560c1d002e4ebd4312b146ba0d4168d36389a"
-  integrity sha512-5UUcvZlGiJ7FsvjfuV8pk5KbLFCsPZOQ0iFAjzXjoTOIBFQ8Zh6QI5pjiDpbnJWbcPX9NNmNGdgqayMfq1q60w==
+"@umijs/mako-win32-x64-msvc@0.9.6":
+  version "0.9.6"
+  resolved "https://registry.yarnpkg.com/@umijs/mako-win32-x64-msvc/-/mako-win32-x64-msvc-0.9.6.tgz#3169ddeab0155dacde0527236d54aabba41c2073"
+  integrity sha512-xtJmfj8pdABLoosHNyzgCILhgrXn/VE8YsBUiKa88w4OpnZ0KHwMM8AhYZO06Fy88u+lOk7vVUB7/GuyAxY8JA==
 
-"@umijs/mako@0.9.5":
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/@umijs/mako/-/mako-0.9.5.tgz#09c177ae8b7df765283261b366a239305e599f11"
-  integrity sha512-NNuPXHwkXifFRhRAlAgu/vYwGExNNJmExtonJTrao7Yr3QEwPToEgPtsJQrGVKZEEIn/IiTb2YDF/ZAzO84Pxw==
+"@umijs/mako@0.9.6":
+  version "0.9.6"
+  resolved "https://registry.yarnpkg.com/@umijs/mako/-/mako-0.9.6.tgz#9909bf5fb9b0ed9d9e0e3f2ad137db303b401547"
+  integrity sha512-IZIyPXB4QgJvD93XHXkKE/F4qao2Ie1m5DTZzzpLytGvNm1NUmygMtaYj8t39N4AtKEx5lPrBxApzBIwF2sUew==
   dependencies:
     "@swc/helpers" "0.5.1"
     "@types/resolve" "^1.20.6"
@@ -2661,58 +2661,58 @@
     semver "^7.6.2"
     yargs-parser "^21.1.1"
   optionalDependencies:
-    "@umijs/mako-darwin-arm64" "0.9.5"
-    "@umijs/mako-darwin-x64" "0.9.5"
-    "@umijs/mako-linux-arm64-gnu" "0.9.5"
-    "@umijs/mako-linux-arm64-musl" "0.9.5"
-    "@umijs/mako-linux-x64-gnu" "0.9.5"
-    "@umijs/mako-linux-x64-musl" "0.9.5"
-    "@umijs/mako-win32-ia32-msvc" "0.9.5"
-    "@umijs/mako-win32-x64-msvc" "0.9.5"
+    "@umijs/mako-darwin-arm64" "0.9.6"
+    "@umijs/mako-darwin-x64" "0.9.6"
+    "@umijs/mako-linux-arm64-gnu" "0.9.6"
+    "@umijs/mako-linux-arm64-musl" "0.9.6"
+    "@umijs/mako-linux-x64-gnu" "0.9.6"
+    "@umijs/mako-linux-x64-musl" "0.9.6"
+    "@umijs/mako-win32-ia32-msvc" "0.9.6"
+    "@umijs/mako-win32-x64-msvc" "0.9.6"
 
-"@umijs/mfsu@4.3.31":
-  version "4.3.31"
-  resolved "https://registry.yarnpkg.com/@umijs/mfsu/-/mfsu-4.3.31.tgz#be20ae0b0dbb71ad2e557a458be90dd61d1faeba"
-  integrity sha512-fnUg1S24OvOa57TwBy9gDcb5q7zxLYTUcjjknn54Kj3ytl8xMn1ozK1Xhynq2tnqc8yqHC8H3r3cjdSZ4aMwsg==
+"@umijs/mfsu@4.3.32":
+  version "4.3.32"
+  resolved "https://registry.yarnpkg.com/@umijs/mfsu/-/mfsu-4.3.32.tgz#a003cff4788510c4ca14159b3eec7f10c55688dc"
+  integrity sha512-toW92x8dU9D6AtZyttmtuu2TSgconaW0Vtw3wjSyx2KrK+QxYEaieqd16W0Zmwma+gA+ogMNNXxP0ETzvBQ2Ew==
   dependencies:
-    "@umijs/bundler-esbuild" "4.3.31"
-    "@umijs/bundler-utils" "4.3.31"
-    "@umijs/utils" "4.3.31"
+    "@umijs/bundler-esbuild" "4.3.32"
+    "@umijs/bundler-utils" "4.3.32"
+    "@umijs/utils" "4.3.32"
     enhanced-resolve "5.9.3"
     is-equal "^1.6.4"
 
-"@umijs/plugin-run@4.3.31":
-  version "4.3.31"
-  resolved "https://registry.yarnpkg.com/@umijs/plugin-run/-/plugin-run-4.3.31.tgz#49679cbab6c102726b9f8babca06610aed8dfbb7"
-  integrity sha512-GSv3GPqpludK5KHH1EItHib/tg/hBv3XZH06dWfOGXKr5eUAojztN/dIMJD+0XFtFEmS1iiIJKgRtOrU1ofknQ==
+"@umijs/plugin-run@4.3.32":
+  version "4.3.32"
+  resolved "https://registry.yarnpkg.com/@umijs/plugin-run/-/plugin-run-4.3.32.tgz#b0dd87f8e0e1f5515c58c4bab4fb6a782257ccb4"
+  integrity sha512-6J8ipZ+npSwibZ90Tw7fjP1hppjBep2pHnf7GzpQuDpfHTLMPKIvHm76m2d7zI1d8kTm688Ut2MZf1PeChV5qA==
   dependencies:
     tsx "3.12.2"
 
-"@umijs/preset-umi@4.3.31":
-  version "4.3.31"
-  resolved "https://registry.yarnpkg.com/@umijs/preset-umi/-/preset-umi-4.3.31.tgz#5800c931aa2473f3807f7a3272ba39aa2b94df95"
-  integrity sha512-UmIdVkr2PkZsbJG1QaaqEvJAAMiG4RpoXoDdbo/IGMgCy6juaukkmEUcNa/nDG+Pm8oskQKUwBdNFY5jLqMaYg==
+"@umijs/preset-umi@4.3.32":
+  version "4.3.32"
+  resolved "https://registry.yarnpkg.com/@umijs/preset-umi/-/preset-umi-4.3.32.tgz#6ce2139079d91404c874d4a83d22b1f9cf040244"
+  integrity sha512-6hzyLLtVAMVc2lKnaV7uPWPrbhne2VtsX/zFho3HFoGDtYQlbx1pc2AxE363XpN1tnKyfCXJl/7YUNtWdRylew==
   dependencies:
     "@iconify/utils" "2.1.1"
     "@svgr/core" "6.5.1"
-    "@umijs/ast" "4.3.31"
-    "@umijs/babel-preset-umi" "4.3.31"
-    "@umijs/bundler-esbuild" "4.3.31"
-    "@umijs/bundler-mako" "0.9.5"
-    "@umijs/bundler-utils" "4.3.31"
-    "@umijs/bundler-vite" "4.3.31"
-    "@umijs/bundler-webpack" "4.3.31"
-    "@umijs/core" "4.3.31"
+    "@umijs/ast" "4.3.32"
+    "@umijs/babel-preset-umi" "4.3.32"
+    "@umijs/bundler-esbuild" "4.3.32"
+    "@umijs/bundler-mako" "0.9.6"
+    "@umijs/bundler-utils" "4.3.32"
+    "@umijs/bundler-vite" "4.3.32"
+    "@umijs/bundler-webpack" "4.3.32"
+    "@umijs/core" "4.3.32"
     "@umijs/did-you-know" "1.0.3"
     "@umijs/es-module-parser" "0.0.7"
     "@umijs/history" "5.3.1"
-    "@umijs/mfsu" "4.3.31"
-    "@umijs/plugin-run" "4.3.31"
-    "@umijs/renderer-react" "4.3.31"
-    "@umijs/server" "4.3.31"
+    "@umijs/mfsu" "4.3.32"
+    "@umijs/plugin-run" "4.3.32"
+    "@umijs/renderer-react" "4.3.32"
+    "@umijs/server" "4.3.32"
     "@umijs/ui" "3.0.1"
-    "@umijs/utils" "4.3.31"
-    "@umijs/zod2ts" "4.3.31"
+    "@umijs/utils" "4.3.32"
+    "@umijs/zod2ts" "4.3.32"
     babel-plugin-dynamic-import-node "2.3.3"
     babel-plugin-react-compiler "0.0.0-experimental-c23de8d-20240515"
     click-to-react-component "1.1.0"
@@ -2746,10 +2746,10 @@
     schema-utils "^3.0.0"
     source-map "^0.7.3"
 
-"@umijs/renderer-react@4.3.31":
-  version "4.3.31"
-  resolved "https://registry.yarnpkg.com/@umijs/renderer-react/-/renderer-react-4.3.31.tgz#91ef683556cd7410cca1a29e7e1d902f2ae94308"
-  integrity sha512-mEWeSvv/XQHgBh8jzdRYgEykqGysLy2KJwBwClzNS1PdTsA9x6yPTHYmC0/LTkaUieJEpZbCSZMJ8G0gVXoJDw==
+"@umijs/renderer-react@4.3.32":
+  version "4.3.32"
+  resolved "https://registry.yarnpkg.com/@umijs/renderer-react/-/renderer-react-4.3.32.tgz#5ba57490e0fa7635d7d3658b6bb86426c7060ecc"
+  integrity sha512-Eer8qGysXPN7cjmY+4xcVJcsCZdwv8K125PiGYLfAifCZgPrXcE315FrfaQ5ywNKXd3lEjI6Ry4ODgqE+WEN5g==
   dependencies:
     "@babel/runtime" "7.23.6"
     "@loadable/component" "5.15.2"
@@ -2757,26 +2757,26 @@
     react-helmet-async "1.3.0"
     react-router-dom "6.3.0"
 
-"@umijs/server@4.3.31":
-  version "4.3.31"
-  resolved "https://registry.yarnpkg.com/@umijs/server/-/server-4.3.31.tgz#bd935dd0bc99a017d24e1a1a3f693ebd27faa9bf"
-  integrity sha512-dR1sjPeenTsdYRNeh8eF+ilN+aOuxdBi6OG6sywBAsq2y9NgSOS7+xS9K80rzrelaYm654S1JnGQjYzTQBZODw==
+"@umijs/server@4.3.32":
+  version "4.3.32"
+  resolved "https://registry.yarnpkg.com/@umijs/server/-/server-4.3.32.tgz#f58b96db741248e0349d2b3c70de6ce9b2f9a262"
+  integrity sha512-4/yUTsWyPBpMUZ84xxEFekOeNMwWzY4fCEA5/KE4PDbIUJJKlbPJ0GKC8LIDg15X3+TjO5IfsXFOp7SdTqBaqQ==
   dependencies:
-    "@umijs/bundler-utils" "4.3.31"
+    "@umijs/bundler-utils" "4.3.32"
     history "5.3.0"
     react "18.3.1"
     react-dom "18.3.1"
     react-router-dom "6.3.0"
 
-"@umijs/test@4.3.31":
-  version "4.3.31"
-  resolved "https://registry.yarnpkg.com/@umijs/test/-/test-4.3.31.tgz#9a39b581f3542257cf3eb34914c27b0d40f438cc"
-  integrity sha512-4W1qYAcgWYp2Gd2lHCh+ZyMUJ6yZQiLrhdclX04D6iZi2zx+fQeBE3/wWJoBdFmu/gi6J6US8T9D6va4ddxp3g==
+"@umijs/test@4.3.32":
+  version "4.3.32"
+  resolved "https://registry.yarnpkg.com/@umijs/test/-/test-4.3.32.tgz#f30c1928297626258cd21e364f1d2ffbdf415712"
+  integrity sha512-F5OBLddt8zm8Zj/WtPdmT9ntBdbCVdk2i5JpGrDsQ5MI8fXQqSuCWxbJOvK1BTVNNIK1kKOjM2rCoeeaFH0ciQ==
   dependencies:
     "@babel/plugin-transform-modules-commonjs" "7.23.3"
     "@jest/types" "27.5.1"
-    "@umijs/bundler-utils" "4.3.31"
-    "@umijs/utils" "4.3.31"
+    "@umijs/bundler-utils" "4.3.32"
+    "@umijs/utils" "4.3.32"
     babel-jest "^29.7.0"
     esbuild "0.21.4"
     identity-obj-proxy "3.0.0"
@@ -2787,18 +2787,18 @@
   resolved "https://registry.yarnpkg.com/@umijs/ui/-/ui-3.0.1.tgz#64ae7ef36bf9374823f7361a7a844876d96c9e06"
   integrity sha512-zcz37AJH0xt/6XVVbyO/hmsK9Hq4vH23HZ4KYVi5A8rbM9KeJkJigTS7ELOdArawZhVNGe+h3a5Oixs4a2QsWw==
 
-"@umijs/utils@4.3.31", "@umijs/utils@^4.3.0", "@umijs/utils@^4.3.27":
-  version "4.3.31"
-  resolved "https://registry.yarnpkg.com/@umijs/utils/-/utils-4.3.31.tgz#36d1137bf7734475a9c01f27d8dba3ff1495eddc"
-  integrity sha512-UyJbN9f0jWlTrVbHb8/3ckpkEApEfRskSSZD9sAL4QMs99i1+9MJnO/GowpyGJUY+9ZhgwIhsc2AJ35r21v2kg==
+"@umijs/utils@4.3.32", "@umijs/utils@^4.3.0", "@umijs/utils@^4.3.27":
+  version "4.3.32"
+  resolved "https://registry.yarnpkg.com/@umijs/utils/-/utils-4.3.32.tgz#b2f6d327fbae310ade1607b2b4e96289833f4441"
+  integrity sha512-hPjCzBO05lHf5mWGmwxddzMta5UofyBM5yPWDjmAGKevLqBKQvsP5O8Kafd9b6geYLphZOFgp3w7zx4kWto3Zg==
   dependencies:
     chokidar "3.5.3"
     pino "7.11.0"
 
-"@umijs/zod2ts@4.3.31":
-  version "4.3.31"
-  resolved "https://registry.yarnpkg.com/@umijs/zod2ts/-/zod2ts-4.3.31.tgz#de91d05c6358301584452c883d7612e508c725a3"
-  integrity sha512-CPZTG8UfMAc9E60QBYLOJ5KA0FGcl6D08YaRgLQFmUdWyHgCXBR2ZHHCWMHPgUXLd5dlokJ49/jFPxKEKfdcDA==
+"@umijs/zod2ts@4.3.32":
+  version "4.3.32"
+  resolved "https://registry.yarnpkg.com/@umijs/zod2ts/-/zod2ts-4.3.32.tgz#d1d909e5a065b3789cc1ab2940f4ac4da98a9ea4"
+  integrity sha512-A1GU2v8UDfDTcsXJ8dxayd2+fFVfg6dHdDYHhOwJO9dde2pANSTtGQ9UbG5h432TaNxy12zzPuvMyECTUBvcwg==
 
 "@ungap/structured-clone@^1.2.0":
   version "1.2.0"
@@ -5007,9 +5007,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.5.41:
-  version "1.5.57"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.57.tgz#cb43af8784166bca24565b3418bf5f775a6b1c86"
-  integrity sha512-xS65H/tqgOwUBa5UmOuNSLuslDo7zho0y/lgQw35pnrqiZh7UOWHCeL/Bt6noJATbA6tpQJGCifsFsIRZj1Fqg==
+  version "1.5.58"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.58.tgz#d90bd7a04d9223dce4e72316e14492140ec9af40"
+  integrity sha512-al2l4r+24ZFL7WzyPTlyD0fC33LLzvxqLCwurtBibVPghRGO9hSTl+tis8t1kD7biPiH/en4U0I7o/nQbYeoVA==
 
 elliptic@^6.5.3, elliptic@^6.5.5:
   version "6.6.1"
@@ -12750,20 +12750,20 @@ typescript@5.3.3, typescript@~5.3.3:
   integrity sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==
 
 umi@^4.3.0:
-  version "4.3.31"
-  resolved "https://registry.yarnpkg.com/umi/-/umi-4.3.31.tgz#035c17dd23fd690289968dda3a5338e7f7d94366"
-  integrity sha512-rrMLo3yZR2MCGoBwUwf/snf1OS43U/9Df3e3Ojru58iPuMB/U/F62hkyGVU2yew5+FsjjT0lYUq/0LKQttGZgA==
+  version "4.3.32"
+  resolved "https://registry.yarnpkg.com/umi/-/umi-4.3.32.tgz#3609700ae3fff88e78c08d8f7db988cf180324d6"
+  integrity sha512-BRfEUCiQ7jkaIp7JfZ7k9x/jJHTd83Fs46PNdl+88lDSbDLnbSJo1AH5ggQwNFPSbL0+z23va+TItey+uBT/mg==
   dependencies:
     "@babel/runtime" "7.23.6"
-    "@umijs/bundler-utils" "4.3.31"
-    "@umijs/bundler-webpack" "4.3.31"
-    "@umijs/core" "4.3.31"
-    "@umijs/lint" "4.3.31"
-    "@umijs/preset-umi" "4.3.31"
-    "@umijs/renderer-react" "4.3.31"
-    "@umijs/server" "4.3.31"
-    "@umijs/test" "4.3.31"
-    "@umijs/utils" "4.3.31"
+    "@umijs/bundler-utils" "4.3.32"
+    "@umijs/bundler-webpack" "4.3.32"
+    "@umijs/core" "4.3.32"
+    "@umijs/lint" "4.3.32"
+    "@umijs/preset-umi" "4.3.32"
+    "@umijs/renderer-react" "4.3.32"
+    "@umijs/server" "4.3.32"
+    "@umijs/test" "4.3.32"
+    "@umijs/utils" "4.3.32"
     prettier-plugin-organize-imports "^3.2.2"
     prettier-plugin-packagejson "2.4.3"
 
