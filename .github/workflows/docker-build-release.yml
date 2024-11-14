@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 env:
-  PROJECT: magic-web-engine
+  PROJECT: magicwebengine
 
 jobs:
   image:
