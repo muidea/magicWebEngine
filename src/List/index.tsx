@@ -11,6 +11,7 @@ import {
 import { createForm } from '@muidea/formily-core';
 import { createSchemaField } from '@muidea/formily-react';
 import React from 'react';
+import "./index.css"
 
 const SchemaField = createSchemaField({
   components: {
@@ -190,15 +191,11 @@ const schema = {
 
 export default () => {
   return (
-    <div
-      style={{display: 'flex',}}
-    >
       <Form form={form} layout="vertical" size="large">
         <SchemaField schema={schema} />
         <FormButtonGroup>
           <Submit onSubmit={console.log}>提交</Submit>
         </FormButtonGroup>
       </Form>
-    </div>
   );
 };
