@@ -4,13 +4,14 @@ hero:
   description: A react library developed with dumi
   actions:
     - text: Hello
-      link: /
+      link: /components/list
     - text: World
       link: /
 features:
   - title: Hello
     emoji: 💎
     description: Put hello description here
+    link: /components/login
   - title: World
     emoji: 🌈
     description: Put world description here

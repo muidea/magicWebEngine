@@ -15,3 +15,6 @@ LABEL Author="rangh"
 LABEL Application=magicWebEngine
 
 COPY --from=building /building/docs-dist /usr/share/nginx/html
+COPY --from=building /building/docker/nginx.conf /etc/nginx/nginx.conf
+
+EXPOSE 8080

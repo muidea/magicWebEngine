@@ -11,7 +11,6 @@ import {
 import { createForm } from '@muidea/formily-core';
 import { createSchemaField } from '@muidea/formily-react';
 import React from 'react';
-import "./index.css"
 
 const SchemaField = createSchemaField({
   components: {

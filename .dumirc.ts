@@ -10,6 +10,6 @@ export default defineConfig({
     }],
   ],
   themeConfig: {
-    name: 'WebEngine',
+    name: 'Blog',
   },
 });
