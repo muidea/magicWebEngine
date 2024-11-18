@@ -10,6 +10,8 @@ export default defineConfig({
     }],
   ],
   themeConfig: {
-    name: 'Blog',
+    name: 'magicBlog',
+    logo: false,
   },
+  title: 'Blog',
 });

@@ -1,4 +1,4 @@
-# Login
+# ALogin
 
 This is an example component.
 

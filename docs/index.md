@@ -1,4 +1,5 @@
 ---
+title: dumi - 为组件研发而生的静态站点框架
 hero:
   title: library
   description: A react library developed with dumi
