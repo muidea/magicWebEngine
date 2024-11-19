@@ -113,7 +113,7 @@ const getSchema = ( loading: boolean,createFunc: actionFunc, removeFunc: actionF
                     },
                     update: {
                       type: 'void',
-                      'x-component': 'ArrayTable.Update',
+                      'x-component': 'ArrayTable.Edit',
                       'x-component-props': {
                         title: updateTitle,
                         schema: updateSchema,

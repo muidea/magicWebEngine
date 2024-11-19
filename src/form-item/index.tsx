@@ -4,7 +4,6 @@ import { usePrefixCls, pickDataProps } from '../__builtins__'
 import { isVoidField } from '@muidea/formily-core'
 import { connect, mapProps } from '@muidea/formily-react'
 import { useFormLayout, FormLayoutShallowContext } from '../form-layout'
-import { isElement } from 'react-is'
 import { Tooltip, Popover, ConfigProvider } from 'antd'
 import {
   QuestionCircleOutlined,
@@ -19,7 +18,7 @@ export interface IFormItemProps {
   prefixCls?: string
   label?: React.ReactNode
   colon?: boolean
-  tooltip?: React.ReactNode | React.ComponentProps<typeof Tooltip>
+  tooltip?: React.ReactNode
   tooltipIcon?: React.ReactNode
   layout?: 'vertical' | 'horizontal' | 'inline'
   tooltipLayout?: 'icon' | 'text'
@@ -54,12 +53,6 @@ export interface IFormItemProps {
 
 type ComposeFormItem = React.FC<React.PropsWithChildren<IFormItemProps>> & {
   BaseItem?: React.FC<React.PropsWithChildren<IFormItemProps>>
-}
-
-const isTooltipProps = (
-  tooltip: React.ReactNode | React.ComponentProps<typeof Tooltip>
-): tooltip is React.ComponentProps<typeof Tooltip> => {
-  return !isElement(tooltip)
 }
 
 const useFormItemLayout = (props: IFormItemProps) => {
@@ -135,9 +128,9 @@ const ICON_MAP = {
 }
 
 export const BaseItem: React.FC<React.PropsWithChildren<IFormItemProps>> = ({
-  children,
-  ...props
-}) => {
+                                                                              children,
+                                                                              ...props
+                                                                            }) => {
   const [active, setActive] = useState(false)
   const formLayout = useFormItemLayout(props)
   const { locale } = useContext(ConfigProvider.ConfigContext)
@@ -226,31 +219,22 @@ export const BaseItem: React.FC<React.PropsWithChildren<IFormItemProps>> = ({
 
   const gridStyles: React.CSSProperties = {}
 
-  const tooltipNode = isTooltipProps(tooltip) ? (
-    <Tooltip {...tooltip}></Tooltip>
-  ) : (
-    tooltip
-  )
-
   const getOverflowTooltip = () => {
     if (overflow) {
       return (
         <div>
           <div>{label}</div>
-          <div>{tooltipNode}</div>
+          <div>{tooltip}</div>
         </div>
       )
     }
-    return tooltipNode
+    return tooltip
   }
 
   const renderLabelText = () => {
     const labelChildren = (
       <div className={`${prefixCls}-label-content`} ref={containerRef}>
         <span ref={contentRef}>
-          {asterisk && requiredMark === true && (
-            <span className={`${prefixCls}-asterisk`}>{'*'}</span>
-          )}
           <label htmlFor={props.labelFor}>{label}</label>
           {!asterisk && requiredMark === 'optional' && !optionalMarkHidden && (
             <span className={`${prefixCls}-optional`}>
@@ -279,11 +263,7 @@ export const BaseItem: React.FC<React.PropsWithChildren<IFormItemProps>> = ({
     if (tooltip && tooltipLayout === 'icon' && !overflow) {
       return (
         <span className={`${prefixCls}-label-tooltip-icon`}>
-          <Tooltip
-            placement="top"
-            align={{ offset: [0, 2] }}
-            title={tooltipNode}
-          >
+          <Tooltip placement="top" align={{ offset: [0, 2] }} title={tooltip}>
             {tooltipIcon}
           </Tooltip>
         </span>
@@ -298,7 +278,7 @@ export const BaseItem: React.FC<React.PropsWithChildren<IFormItemProps>> = ({
         className={cls({
           [`${prefixCls}-label`]: true,
           [`${prefixCls}-label-tooltip`]:
-            (tooltip && tooltipLayout === 'text') || overflow,
+          (tooltip && tooltipLayout === 'text') || overflow,
           [`${prefixCls}-item-col-${labelCol}`]: enableCol && !!labelCol,
         })}
         style={labelStyle}
@@ -307,6 +287,16 @@ export const BaseItem: React.FC<React.PropsWithChildren<IFormItemProps>> = ({
         {renderTooltipIcon()}
         {label !== ' ' && (
           <span className={`${prefixCls}-colon`}>{colon ? ':' : ''}</span>
+        )}
+      </div>
+    )
+  }
+
+  const renderRequestMask = () => {
+    return (
+      <div>
+        {asterisk && requiredMark === true && (
+          <span className={`${prefixCls}-required-mark`}>{'*'}</span>
         )}
       </div>
     )
@@ -324,7 +314,7 @@ export const BaseItem: React.FC<React.PropsWithChildren<IFormItemProps>> = ({
         [`${prefixCls}`]: true,
         [`${prefixCls}-layout-${layout}`]: true,
         [`${prefixCls}-${feedbackStatus}`]:
-          enableOutlineFeedback && !!feedbackStatus,
+        enableOutlineFeedback && !!feedbackStatus,
         [`${prefixCls}-feedback-has-text`]: !!feedbackText,
         [`${prefixCls}-size-${size}`]: !!size,
         [`${prefixCls}-feedback-layout-${feedbackLayout}`]: !!feedbackLayout,
@@ -337,7 +327,7 @@ export const BaseItem: React.FC<React.PropsWithChildren<IFormItemProps>> = ({
         [`${prefixCls}-label-wrap`]: !!labelWrap,
         [`${prefixCls}-control-wrap`]: !!wrapperWrap,
         [`${prefixCls}-bordered-none`]:
-          bordered === false || !!inset || !!feedbackIcon,
+        bordered === false || !!inset || !!feedbackIcon,
         [props.className]: !!props.className,
       })}
       onFocus={() => {
@@ -356,7 +346,7 @@ export const BaseItem: React.FC<React.PropsWithChildren<IFormItemProps>> = ({
         className={cls({
           [`${prefixCls}-control`]: true,
           [`${prefixCls}-item-col-${wrapperCol}`]:
-            enableCol && !!wrapperCol && label,
+          enableCol && !!wrapperCol && label,
         })}
       >
         <div className={cls(`${prefixCls}-control-content`)}>
@@ -385,6 +375,7 @@ export const BaseItem: React.FC<React.PropsWithChildren<IFormItemProps>> = ({
           {addonAfter && (
             <div className={cls(`${prefixCls}-addon-after`)}>{addonAfter}</div>
           )}
+          {renderRequestMask()}
         </div>
         {!!feedbackText &&
           feedbackLayout !== 'popover' &&
