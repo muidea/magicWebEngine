@@ -11,10 +11,11 @@ import { Table, Pagination, Space, Select, Badge } from 'antd'
 import { PaginationProps } from 'antd/lib/pagination'
 import { TableProps, ColumnProps } from 'antd/lib/table'
 import { SelectProps } from 'antd/lib/select'
+import { CopyOutlined, DeleteOutlined, EditOutlined, PlusOutlined } from "@ant-design/icons"
 import cls from 'classnames'
 import { GeneralField, FieldDisplayTypes, ArrayField } from '@muidea/formily-core'
 import {  useField,  observer,  useFieldSchema,  RecursionField,  ReactFC,} from '@muidea/formily-react'
-import { isArr, isBool, isFn } from '@muidea/formily-shared'
+import {  clone, isArr, isBool, isUndef } from '@muidea/formily-shared'
 import { Schema } from '@muidea/formily-json-schema'
 import {
   usePrefixCls,
@@ -22,6 +23,7 @@ import {
   SortableElement,
 } from '../__builtins__'
 import { ArrayBase, ArrayBaseMixins, IArrayBaseProps } from '../array-base'
+import { EditDialog } from "../array-item-dialog"
 
 interface ObservableColumnSource {
   field: GeneralField
@@ -323,7 +325,7 @@ export const ArrayTable: ComposedArrayTable = observer((props) => {
     ? { showPagination: props.pagination }
     : props.pagination
   const addition = useAddition()
-  const { onAdd, onCopy, onRemove, onMoveDown, onMoveUp } = props
+  const { onAdd, onCopy, onEdit, onRemove, onMoveDown, onMoveUp } = props
   const defaultRowKey = (record: any) => {
     return dataSource.indexOf(record)
   }
@@ -417,32 +419,92 @@ ArrayTable.Column = () => {
 ArrayBase.mixin(ArrayTable)
 
 const Addition: ArrayBaseMixins['Addition'] = (props) => {
+  const self = useField()
   const array = ArrayBase.useArray()
-  const {
-    totalPage = 0,
-    pageSize = 10,
-    changePage,
-    showPagination,
-  } = usePagination()
+  const prefixCls = usePrefixCls('formily-array-base')
+  if (!array) return null
+  if (array.field?.pattern !== 'editable') return null
   return (
-    <ArrayBase.Addition
-      {...props}
-      onClick={(e) => {
-        // 如果添加数据后将超过当前页，则自动切换到下一页
-        const total = array?.field?.value.length || 0
-        if (
-          showPagination &&
-          total === totalPage * pageSize + 1 &&
-          isFn(changePage)
-        ) {
-          changePage(totalPage + 1)
-        }
-        props.onClick?.(e)
-      }}
+    <EditDialog
+      title={props.title || self.title}
+      className={cls(`${prefixCls}-addition`, props.className)}
+      icon={isUndef(props.icon) ? <PlusOutlined /> : props.icon}
+      type="dashed"
+      block
+      schema={props.schema}
+      onSubmit={props.onSubmit}
     />
   )
 }
-
 ArrayTable.Addition = Addition
+
+const Copy: ArrayBaseMixins['Copy'] = (props) => {
+  const index = ArrayBase.useIndex(props.index)
+  const self = useField()
+  const array = ArrayBase.useArray()
+  const prefixCls = usePrefixCls('formily-array-base')
+  if (!array) return null
+  if (array.field?.pattern !== 'editable') return null
+
+  const value = clone(array?.field?.value[index])
+  return (
+    <EditDialog
+      title={props.title || self.title}
+      className={cls(`${prefixCls}-copy`, props.className)}
+      icon={isUndef(props.icon) ? <CopyOutlined /> : props.icon}
+      type="text"
+      schema={props.schema}
+      initialValues={value}
+      onSubmit={props.onSubmit}
+    />
+  )
+}
+ArrayTable.Copy = Copy
+
+const Remove : ArrayBaseMixins['Remove']= (props:any) => {
+  const index = ArrayBase.useIndex(props.index)
+  const self = useField()
+  const array = ArrayBase.useArray()
+  const prefixCls = usePrefixCls('formily-array-base')
+  if (!array) return null
+  if (array.field?.pattern !== 'editable') return null
+
+  const value = clone(array?.field?.value[index])
+  return (
+    <EditDialog
+      title={props.title || self.title}
+      className={cls(`${prefixCls}-remove`, props.className)}
+      icon={isUndef(props.icon) ? <DeleteOutlined /> : props.icon}
+      type="text"
+      schema={props.schema}
+      initialValues={value}
+      onSubmit={props.onSubmit}
+    />
+  )
+}
+ArrayTable.Remove = Remove
+
+const Edit: ArrayBaseMixins['Edit'] = (props:any) => {
+  const index = ArrayBase.useIndex(props.index)
+  const self = useField()
+  const array = ArrayBase.useArray()
+  const prefixCls = usePrefixCls('formily-array-base')
+  if (!array) return null
+  if (array.field?.pattern !== 'editable') return null
+
+  const value = clone(array?.field?.value[index])
+  return (
+    <EditDialog
+      title={props.title || self.title}
+      className={cls(`${prefixCls}-edit`, props.className)}
+      icon={isUndef(props.icon) ? <EditOutlined /> : props.icon}
+      type="text"
+      schema={props.schema}
+      initialValues={value}
+      onSubmit={props.onSubmit}
+    />
+  )
+}
+ArrayTable.Edit = Edit
 
 export default ArrayTable

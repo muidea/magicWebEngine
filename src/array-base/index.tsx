@@ -19,11 +19,15 @@ import { SortableHandle, usePrefixCls } from '../__builtins__'
 export interface IArrayBaseAdditionProps extends ButtonProps {
   title?: string
   method?: 'push' | 'unshift'
+  schema?: Schema
+  onSubmit?: ((value:any) => void)
   defaultValue?: any
 }
 export interface IArrayBaseOperationProps extends ButtonProps {
   title?: string
   index?: number
+  schema?: Schema
+  onSubmit?: ((value:any) => void)
   ref?: React.Ref<HTMLElement>
 }
 
@@ -59,8 +63,8 @@ export type ArrayBaseMixins = {
     React.PropsWithChildren<IArrayBaseOperationProps & { index?: number }>
   >
   Index?: React.FC
-  useArray?: () => IArrayBaseContext
-  useIndex?: (index?: number) => number
+  useArray: () => IArrayBaseContext
+  useIndex: (index?: number) => number
   useRecord?: (record?: number) => any
 }
 
@@ -110,6 +114,7 @@ const getSchemaDefaultValue = (schema: Schema) => {
       if (isValid(value)) return value
     }
   }
+  return []
 }
 
 const getDefaultValue = (defaultValue: any, schema: Schema) => {
@@ -156,7 +161,7 @@ ArrayBase.Index = (props) => {
   const prefixCls = usePrefixCls('formily-array-base')
   return (
     <span {...props} className={`${prefixCls}-index`}>
-      #{index + 1}.
+      {index + 1}.
     </span>
   )
 }
