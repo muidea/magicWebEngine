@@ -13,5 +13,4 @@ export default defineConfig({
     name: 'magicBlog',
     logo: false,
   },
-  title: 'Blog',
 });

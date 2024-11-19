@@ -69,13 +69,16 @@
     "stylelint": "^14.9.1"
   },
   "dependencies": {
+    "@dnd-kit/core": "^6.0.0",
+    "@dnd-kit/sortable": "^7.0.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "@muidea/formily-antd": "2.3.3",
     "@muidea/formily-core": "2.3.2",
     "@muidea/formily-react": "2.3.2",
+    "@ant-design/icons": "^4.8.3",
+    "@ant-design/pro-components": "^2.4.4",
     "antd": "^4.24.16",
     "babel-plugin-import": "^1.13.8",
     "moment": "^2.30.1"
