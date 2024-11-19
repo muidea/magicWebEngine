@@ -11,11 +11,17 @@ import { Table, Pagination, Space, Select, Badge } from 'antd'
 import { PaginationProps } from 'antd/lib/pagination'
 import { TableProps, ColumnProps } from 'antd/lib/table'
 import { SelectProps } from 'antd/lib/select'
-import { CopyOutlined, DeleteOutlined, EditOutlined, PlusOutlined } from "@ant-design/icons"
+import { CopyOutlined, DeleteOutlined, EditOutlined, PlusOutlined } from '@ant-design/icons'
 import cls from 'classnames'
 import { GeneralField, FieldDisplayTypes, ArrayField } from '@muidea/formily-core'
-import {  useField,  observer,  useFieldSchema,  RecursionField,  ReactFC,} from '@muidea/formily-react'
-import {  clone, isArr, isBool, isUndef } from '@muidea/formily-shared'
+import {
+  useField,
+  observer,
+  useFieldSchema,
+  RecursionField,
+  ReactFC,
+} from '@muidea/formily-react'
+import { clone, isArr, isBool, isUndef } from '@muidea/formily-shared'
 import { Schema } from '@muidea/formily-json-schema'
 import {
   usePrefixCls,
@@ -23,7 +29,7 @@ import {
   SortableElement,
 } from '../__builtins__'
 import { ArrayBase, ArrayBaseMixins, IArrayBaseProps } from '../array-base'
-import { EditDialog } from "../array-item-dialog"
+import { EditDialog } from '../array-item-dialog'
 
 interface ObservableColumnSource {
   field: GeneralField
@@ -52,8 +58,8 @@ type ComposedArrayTable = React.FC<
   React.PropsWithChildren<TableProps<any> & IArrayBaseProps>
 > &
   ArrayBaseMixins & {
-    Column?: React.FC<React.PropsWithChildren<ColumnProps<any>>>
-  }
+  Column?: React.FC<React.PropsWithChildren<ColumnProps<any>>>
+}
 
 interface PaginationAction {
   totalPage?: number
@@ -90,6 +96,7 @@ const useArrayTableSources = () => {
         return []
       const name = schema['x-component-props']?.['dataIndex'] || schema['name']
       const field = arrayField.query(arrayField.address.concat(name)).take()
+      // @ts-ignore
       const columnProps = field?.component?.[1] || schema['x-component-props'] || {}
       const display = field?.display || schema['x-display'] || 'visible'
       return [
@@ -103,6 +110,7 @@ const useArrayTableSources = () => {
       ]
     } else if (schema.properties) {
       return schema.reduceProperties((buf, schema) => {
+        // @ts-ignore
         return buf.concat(parseSources(schema))
       }, [])
     }
@@ -142,6 +150,7 @@ const useArrayTableColumns = (
       dataIndex: name,
       render: (value: any, record: any) => {
         const index = dataSource?.indexOf(record)
+        // @ts-ignore
         const children = (
           <ArrayBase.Item index={index} record={() => field?.value?.[index]}>
             <RecursionField schema={schema} name={index} onlyRenderProperties />
@@ -212,7 +221,9 @@ const StatusSelect: ReactFC<IStatusSelectProps> = observer(
   },
   {
     scheduler: (update) => {
+      // @ts-ignore
       clearTimeout(schedulerRequest.request)
+      // @ts-ignore
       schedulerRequest.request = setTimeout(() => {
         update()
       }, 100)
@@ -353,23 +364,24 @@ export const ArrayTable: ComposedArrayTable = observer((props) => {
           accessibility={{
             container: ref.current || undefined,
           }}
-          onSortStart={(event: { active: { id: number } }) => {
-            addTdStyles(event.active.id as number);
+          onSortStart={(event) => {
+            addTdStyles(event.active.id as number)
           }}
           onSortEnd={({ oldIndex, newIndex }) => {
-            field.move(oldIndex, newIndex);
+            field.move(oldIndex, newIndex)
           }}
           className={cls(`${prefixCls}-sort-helper`, props.className)}
         />
       ),
-    [field],
-  );
+    [field]
+  )
   return (
     <ArrayTablePagination {...pagination} dataSource={dataSource}>
       {(dataSource, pager, { startIndex }) => (
         <div ref={ref} className={prefixCls}>
           <ArrayBase
             onAdd={onAdd}
+            onEdit={onEdit}
             onCopy={onCopy}
             onRemove={onRemove}
             onMoveUp={onMoveUp}
@@ -461,13 +473,13 @@ const Copy: ArrayBaseMixins['Copy'] = (props) => {
 }
 ArrayTable.Copy = Copy
 
+
 const Remove : ArrayBaseMixins['Remove']= (props:any) => {
   const index = ArrayBase.useIndex(props.index)
   const self = useField()
   const array = ArrayBase.useArray()
   const prefixCls = usePrefixCls('formily-array-base')
   if (!array) return null
-  if (array.field?.pattern !== 'editable') return null
 
   const value = clone(array?.field?.value[index])
   return (

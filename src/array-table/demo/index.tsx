@@ -1,5 +1,4 @@
 import React from "react"
-import { PageContainer } from "@ant-design/pro-components"
 import { FormItem } from "../../form-item"
 import { Form } from "../../form"
 import { PreviewText } from "../../preview-text"
@@ -10,17 +9,24 @@ import getSchema from "./schema"
 
 export default () => {
   const onCreateWarehouse = (value: any) => {
+    console.log(value)
   }
 
   const onUpdateWarehouse = (value: any) => {
+    console.log(value)
   }
 
   const onRemoveWarehouse = (value: any) =>{
+    console.log(value)
   }
 
   const getInitialValues = () => {
     return {
-      projects: [],
+      items: [{
+        code: '1001',
+        name: 'test Name',
+        description: 'test description',
+      }],
     }
   }
 

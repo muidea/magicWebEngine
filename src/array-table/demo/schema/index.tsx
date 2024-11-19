@@ -9,7 +9,7 @@ const getSchema = ( loading: boolean,createFunc: actionFunc, removeFunc: actionF
   return {
     type: 'object',
     properties: {
-      projects: {
+      items: {
         type: 'array',
         'x-decorator': 'FormItem',
         'x-component': 'ArrayTable',

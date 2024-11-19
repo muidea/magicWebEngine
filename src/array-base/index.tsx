@@ -23,9 +23,10 @@ export interface IArrayBaseAdditionProps extends ButtonProps {
   onSubmit?: ((value:any) => void)
   defaultValue?: any
 }
+
 export interface IArrayBaseOperationProps extends ButtonProps {
   title?: string
-  index?: number
+  index: number
   schema?: Schema
   onSubmit?: ((value:any) => void)
   ref?: React.Ref<HTMLElement>
@@ -64,8 +65,8 @@ export type ArrayBaseMixins = {
   >
   Index?: React.FC
   useArray: () => IArrayBaseContext
-  useIndex: (index?: number) => number
-  useRecord?: (record?: number) => any
+  useIndex: (index: number) => number
+  useRecord?: (record: number) => any
 }
 
 export interface IArrayBaseProps {
@@ -80,12 +81,14 @@ export interface IArrayBaseProps {
 
 type ComposedArrayBase = React.FC<React.PropsWithChildren<IArrayBaseProps>> &
   ArrayBaseMixins & {
-    Item?: React.FC<React.PropsWithChildren<IArrayBaseItemProps>>
-    mixin?: <T extends JSXComponent>(target: T) => T & ArrayBaseMixins
-  }
+  Item?: React.FC<React.PropsWithChildren<IArrayBaseItemProps>>
+  mixin?: <T extends JSXComponent>(target: T) => T & ArrayBaseMixins
+}
 
+// @ts-ignore
 const ArrayBaseContext = createContext<IArrayBaseContext>(null)
 
+// @ts-ignore
 const ItemContext = createContext<IArrayBaseItemProps>(null)
 
 const takeRecord = (val: any, index?: number) =>
@@ -95,7 +98,7 @@ const useArray = () => {
   return useContext(ArrayBaseContext)
 }
 
-const useIndex = (index?: number) => {
+const useIndex = (index: number) => {
   const ctx = useContext(ItemContext)
   return ctx ? ctx.index : index
 }
@@ -105,22 +108,26 @@ const useRecord = (record?: number) => {
   return takeRecord(ctx ? ctx.record : record, ctx?.index)
 }
 
+// @ts-ignore
 const getSchemaDefaultValue = (schema: Schema) => {
   if (schema?.type === 'array') return []
   if (schema?.type === 'object') return {}
   if (schema?.type === 'void') {
     for (let key in schema.properties) {
+      // @ts-ignore
       const value = getSchemaDefaultValue(schema.properties[key])
       if (isValid(value)) return value
     }
   }
-  return []
+
+  return null
 }
 
 const getDefaultValue = (defaultValue: any, schema: Schema) => {
   if (isValid(defaultValue)) return clone(defaultValue)
   if (Array.isArray(schema?.items))
     return getSchemaDefaultValue(schema?.items[0])
+  // @ts-ignore
   return getSchemaDefaultValue(schema?.items)
 }
 
@@ -157,11 +164,11 @@ ArrayBase.SortHandle = (props) => {
 }
 
 ArrayBase.Index = (props) => {
-  const index = useIndex()
+  const index = useIndex(0)
   const prefixCls = usePrefixCls('formily-array-base')
   return (
     <span {...props} className={`${prefixCls}-index`}>
-      {index + 1}.
+      {index + 1}
     </span>
   )
 }
@@ -205,6 +212,7 @@ ArrayBase.Addition = (props) => {
   )
 }
 
+// @ts-ignore
 ArrayBase.Copy = React.forwardRef((props, ref) => {
   const self = useField()
   const array = useArray()
@@ -243,6 +251,7 @@ ArrayBase.Copy = React.forwardRef((props, ref) => {
   )
 })
 
+// @ts-ignore
 ArrayBase.Edit = React.forwardRef((props, ref) => {
   const self = useField()
   const array = useArray()
@@ -281,6 +290,7 @@ ArrayBase.Edit = React.forwardRef((props, ref) => {
   )
 })
 
+// @ts-ignore
 ArrayBase.Remove = React.forwardRef((props, ref) => {
   const index = useIndex(props.index)
   const self = useField()
@@ -316,6 +326,7 @@ ArrayBase.Remove = React.forwardRef((props, ref) => {
   )
 })
 
+// @ts-ignore
 ArrayBase.MoveDown = React.forwardRef((props, ref) => {
   const index = useIndex(props.index)
   const self = useField()
@@ -351,6 +362,7 @@ ArrayBase.MoveDown = React.forwardRef((props, ref) => {
   )
 })
 
+// @ts-ignore
 ArrayBase.MoveUp = React.forwardRef((props, ref) => {
   const index = useIndex(props.index)
   const self = useField()
