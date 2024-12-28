@@ -2,6 +2,8 @@
 
 A react library developed with dumi
 
+基于 dumi 的前端测试项目，这里可以快速的进行前端代码验证
+
 ## Usage
 
 TODO
