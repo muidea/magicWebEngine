@@ -1,10 +1,10 @@
-import moment from 'moment'
 import { connect, mapProps, mapReadPretty } from '@muidea/formily-react'
 import { TimePicker as AntdTimePicker } from 'antd'
 import {
   TimePickerProps as AntdTimePickerProps,
   TimeRangePickerProps,
 } from 'antd/lib/time-picker'
+import moment from 'moment'
 import { PreviewText } from '../preview-text'
 import { formatMomentValue, momentable } from '../__builtins__'
 

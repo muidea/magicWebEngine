@@ -1,22 +1,27 @@
-import React, { Fragment, useRef, useLayoutEffect, useState } from 'react'
-import { createPortal } from 'react-dom'
-import { createForm, IFormProps, Form } from '@muidea/formily-core'
-import { toJS } from '@muidea/formily-reactive'
-import { FormProvider, Observer, observer, ReactFC } from '@muidea/formily-react'
+import { createForm, Form, IFormProps } from '@muidea/formily-core'
 import {
-  isNum,
-  isStr,
-  isBool,
-  isFn,
+  FormProvider,
+  Observer,
+  observer,
+  ReactFC,
+} from '@muidea/formily-react'
+import { toJS } from '@muidea/formily-reactive'
+import {
   applyMiddleware,
   IMiddleware,
+  isBool,
+  isFn,
+  isNum,
+  isStr,
 } from '@muidea/formily-shared'
 import { Modal, ModalProps } from 'antd'
+import React, { Fragment, useLayoutEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import {
-  usePrefixCls,
-  loading,
   createPortalProvider,
   createPortalRoot,
+  loading,
+  usePrefixCls,
 } from '../__builtins__'
 
 type FormDialogRenderer =
@@ -109,6 +114,9 @@ export function FormDialog(title: any, id: any, renderer?: any): IFormDialog {
           <Modal
             {...modal}
             visible={visible}
+            maskStyle={{
+              backgroundColor: 'rgba(0, 0, 0, 0.2)',
+            }}
             confirmLoading={env.form.submitting}
             onCancel={(e) => {
               if (modal?.onCancel?.(e) !== false) {

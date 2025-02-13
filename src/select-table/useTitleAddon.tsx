@@ -1,5 +1,5 @@
-import React from 'react'
 import { Checkbox } from 'antd'
+import React from 'react'
 import { completedKeys, getCompatibleAllSelected } from './utils'
 
 // 重写表格表头Checkbox（节点状态按全完整数据计算，节点操作按筛选数据计算）

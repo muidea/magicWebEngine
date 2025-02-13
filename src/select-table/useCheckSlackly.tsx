@@ -1,8 +1,8 @@
 import {
-  getTreeKeys,
-  hasSelectedKey,
   completedKeys,
   getCompatibleAllSelected,
+  getTreeKeys,
+  hasSelectedKey,
 } from './utils'
 
 /**

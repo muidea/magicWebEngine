@@ -1,4 +1,4 @@
-import { isArr, isFn, isEmpty } from '@muidea/formily-shared'
+import { isArr, isEmpty, isFn } from '@muidea/formily-shared'
 import moment from 'moment'
 
 export const momentable = (value: any, format?: string) => {

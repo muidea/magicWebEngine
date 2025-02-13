@@ -1,14 +1,19 @@
 import {
   CopyOutlined,
   DeleteOutlined,
-  EditOutlined,
   DownOutlined,
+  EditOutlined,
   MenuOutlined,
   PlusOutlined,
   UpOutlined,
 } from '@ant-design/icons'
 import { ArrayField } from '@muidea/formily-core'
-import { JSXComponent, Schema, useField, useFieldSchema } from '@muidea/formily-react'
+import {
+  JSXComponent,
+  Schema,
+  useField,
+  useFieldSchema,
+} from '@muidea/formily-react'
 import { clone, isUndef, isValid } from '@muidea/formily-shared'
 import { Button } from 'antd'
 import { ButtonProps } from 'antd/lib/button'
@@ -20,7 +25,7 @@ export interface IArrayBaseAdditionProps extends ButtonProps {
   title?: string
   method?: 'push' | 'unshift'
   schema?: Schema
-  onSubmit?: ((value:any) => void)
+  onSubmit?: (value: any) => void
   defaultValue?: any
 }
 
@@ -28,7 +33,7 @@ export interface IArrayBaseOperationProps extends ButtonProps {
   title?: string
   index: number
   schema?: Schema
-  onSubmit?: ((value:any) => void)
+  onSubmit?: (value: any) => void
   ref?: React.Ref<HTMLElement>
 }
 
@@ -64,9 +69,9 @@ export type ArrayBaseMixins = {
     React.PropsWithChildren<IArrayBaseOperationProps & { index?: number }>
   >
   Index?: React.FC
-  useArray: () => IArrayBaseContext
-  useIndex: (index: number) => number
-  useRecord?: (record: number) => any
+  useArray?: () => IArrayBaseContext
+  useIndex?: (index?: number) => number
+  useRecord?: (record?: number) => any
 }
 
 export interface IArrayBaseProps {
@@ -81,9 +86,9 @@ export interface IArrayBaseProps {
 
 type ComposedArrayBase = React.FC<React.PropsWithChildren<IArrayBaseProps>> &
   ArrayBaseMixins & {
-  Item?: React.FC<React.PropsWithChildren<IArrayBaseItemProps>>
-  mixin?: <T extends JSXComponent>(target: T) => T & ArrayBaseMixins
-}
+    Item?: React.FC<React.PropsWithChildren<IArrayBaseItemProps>>
+    mixin?: <T extends JSXComponent>(target: T) => T & ArrayBaseMixins
+  }
 
 // @ts-ignore
 const ArrayBaseContext = createContext<IArrayBaseContext>(null)

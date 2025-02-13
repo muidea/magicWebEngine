@@ -1,7 +1,7 @@
+import { Observer } from '@muidea/formily-react'
+import { observable } from '@muidea/formily-reactive'
 import React, { Fragment } from 'react'
 import { createPortal } from 'react-dom'
-import { observable } from '@muidea/formily-reactive'
-import { Observer } from '@muidea/formily-react'
 import { render as reactRender, unmount as reactUnmount } from './render'
 export interface IPortalProps {
   id?: string | symbol
@@ -9,8 +9,8 @@ export interface IPortalProps {
 
 const PortalMap = observable(new Map<string | symbol, React.ReactNode>())
 
-export const createPortalProvider = (id: string | symbol) => {
-  const Portal = (props: React.PropsWithChildren<IPortalProps>) => {
+export const createPortalProvider = (id: string | symbol = "") => {
+  const Portal = (props: React.PropsWithChildren<IPortalProps> = {id}) => {
     if (props.id && !PortalMap.has(props.id)) {
       PortalMap.set(props.id, null)
     }
@@ -28,9 +28,6 @@ export const createPortalProvider = (id: string | symbol) => {
         </Observer>
       </Fragment>
     )
-  }
-  Portal.defaultProps = {
-    id,
   }
   return Portal
 }

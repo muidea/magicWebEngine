@@ -1,6 +1,14 @@
+import {
+  Form as FormType,
+  IFormFeedback,
+  ObjectField,
+} from '@muidea/formily-core'
+import {
+  FormProvider,
+  JSXComponent,
+  useParentForm,
+} from '@muidea/formily-react'
 import React from 'react'
-import { Form as FormType, ObjectField, IFormFeedback } from '@muidea/formily-core'
-import { useParentForm, FormProvider, JSXComponent } from '@muidea/formily-react'
 import { FormLayout, IFormLayoutProps } from '../form-layout'
 import { PreviewText } from '../preview-text'
 export interface FormProps extends IFormLayoutProps {
@@ -13,7 +21,7 @@ export interface FormProps extends IFormLayoutProps {
 
 export const Form: React.FC<React.PropsWithChildren<FormProps>> = ({
   form,
-  component,
+  component = 'form',
   onAutoSubmit,
   onAutoSubmitFailed,
   previewTextPlaceholder,
@@ -41,10 +49,6 @@ export const Form: React.FC<React.PropsWithChildren<FormProps>> = ({
     return <FormProvider form={form}>{renderContent(form)}</FormProvider>
   if (!top) throw new Error('must pass form instance by createForm')
   return renderContent(top)
-}
-
-Form.defaultProps = {
-  component: 'form',
 }
 
 export default Form

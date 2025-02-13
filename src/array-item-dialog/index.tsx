@@ -1,27 +1,27 @@
-import React from 'react'
 import { createSchemaField } from '@muidea/formily-react'
 import { Button } from 'antd'
-import { FormItem } from '../form-item'
-import { Input } from '../input'
+import React from 'react'
 import { FormDialog } from '../form-dialog'
+import { FormItem } from '../form-item'
 import { FormLayout } from '../form-layout'
+import { Input } from '../input'
 import { NumberPicker } from '../number-picker'
 import { Password } from '../password'
 import { Radio } from '../radio'
-import { Select, ObjectSelect } from '../select'
+import { ObjectSelect, Select } from '../select'
 import { Switch } from '../switch'
 import { TimePicker } from '../time-picker'
 import { Transfer } from '../transfer'
-import { TreeSelect } from '../tree-select'
+import { ObjectTreeSelect, TreeSelect } from '../tree-select'
 import { Upload } from '../upload'
 
 interface DialogProps {
   title: string
   className: string
   icon?: any
-  type: "default" | "primary" | "ghost" | "dashed" | "link" | "text"
-  block?: boolean,
-  disabled?: boolean,
+  type: 'default' | 'primary' | 'ghost' | 'dashed' | 'link' | 'text'
+  block?: boolean
+  disabled?: boolean
   schema: any
   initialValues?: any
   onSubmit?: (value: any) => void
@@ -40,6 +40,7 @@ const SchemaField = createSchemaField({
     TimePicker,
     Transfer,
     TreeSelect,
+    ObjectTreeSelect,
     Upload,
   },
 })
@@ -82,6 +83,4 @@ const EditDialog = (props: DialogProps) => {
   )
 }
 
-export {
-  EditDialog
-}
+export { EditDialog }

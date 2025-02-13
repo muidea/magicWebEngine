@@ -1,17 +1,17 @@
-import React, { Fragment, useMemo } from 'react'
-import { Collapse, Badge } from 'antd'
-import { model, markRaw } from '@muidea/formily-reactive'
-import { CollapseProps, CollapsePanelProps } from 'antd/lib/collapse'
-import {
-  useField,
-  observer,
-  useFieldSchema,
-  RecursionField,
-} from '@muidea/formily-react'
 import { Schema, SchemaKey } from '@muidea/formily-json-schema'
-import cls from 'classnames'
-import { usePrefixCls } from '../__builtins__'
+import {
+  observer,
+  RecursionField,
+  useField,
+  useFieldSchema,
+} from '@muidea/formily-react'
+import { markRaw, model } from '@muidea/formily-reactive'
 import { toArr } from '@muidea/formily-shared'
+import { Badge, Collapse } from 'antd'
+import { CollapsePanelProps, CollapseProps } from 'antd/lib/collapse'
+import cls from 'classnames'
+import React, { Fragment, useMemo } from 'react'
+import { usePrefixCls } from '../__builtins__'
 
 type ActiveKeys = string | number | Array<string | number>
 

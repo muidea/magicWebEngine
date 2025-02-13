@@ -1,9 +1,9 @@
-import React from 'react'
+import { LoadingOutlined } from '@ant-design/icons'
 import { connect, mapProps, mapReadPretty } from '@muidea/formily-react'
 import { Input as AntdInput } from 'antd'
 import { InputProps, TextAreaProps } from 'antd/lib/input'
+import React from 'react'
 import { PreviewText } from '../preview-text'
-import { LoadingOutlined } from '@ant-design/icons'
 
 type ComposedInput = React.FC<React.PropsWithChildren<InputProps>> & {
   TextArea?: React.FC<React.PropsWithChildren<TextAreaProps>>

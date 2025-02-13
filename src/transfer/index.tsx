@@ -1,6 +1,6 @@
+import { isVoidField } from '@muidea/formily-core'
 import { connect, mapProps } from '@muidea/formily-react'
 import { Transfer as AntdTransfer } from 'antd'
-import { isVoidField } from '@muidea/formily-core'
 
 export const Transfer = connect(
   AntdTransfer,

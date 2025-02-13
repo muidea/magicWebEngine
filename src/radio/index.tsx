@@ -1,6 +1,6 @@
 import { connect, mapProps, mapReadPretty } from '@muidea/formily-react'
 import { Radio as AntdRadio } from 'antd'
-import { RadioProps, RadioGroupProps } from 'antd/lib/radio'
+import { RadioGroupProps, RadioProps } from 'antd/lib/radio'
 import { PreviewText } from '../preview-text'
 
 type ComposedRadio = React.FC<React.PropsWithChildren<RadioProps>> & {

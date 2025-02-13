@@ -1,5 +1,5 @@
+import { isArr, isFn } from '@muidea/formily-shared'
 import * as React from 'react'
-import { isFn, isArr } from '@muidea/formily-shared'
 
 type IFilterOption = boolean | ((option: any, keyword: string) => boolean)
 

@@ -1,35 +1,44 @@
-import React, {
-  Fragment,
-  useState,
-  useRef,
-  useEffect,
-  createContext,
-  useContext,
-  useCallback,
-} from 'react'
-import { Table, Pagination, Space, Select, Badge } from 'antd'
-import { PaginationProps } from 'antd/lib/pagination'
-import { TableProps, ColumnProps } from 'antd/lib/table'
-import { SelectProps } from 'antd/lib/select'
-import { CopyOutlined, DeleteOutlined, EditOutlined, PlusOutlined } from '@ant-design/icons'
-import cls from 'classnames'
-import { GeneralField, FieldDisplayTypes, ArrayField } from '@muidea/formily-core'
 import {
-  useField,
-  observer,
-  useFieldSchema,
-  RecursionField,
-  ReactFC,
-} from '@muidea/formily-react'
-import { clone, isArr, isBool, isUndef } from '@muidea/formily-shared'
+  CopyOutlined,
+  DeleteOutlined,
+  EditOutlined,
+  PlusOutlined,
+} from '@ant-design/icons'
+import {
+  ArrayField,
+  FieldDisplayTypes,
+  GeneralField,
+} from '@muidea/formily-core'
 import { Schema } from '@muidea/formily-json-schema'
 import {
-  usePrefixCls,
-  SortableContainer,
-  SortableElement,
-} from '../__builtins__'
+  observer,
+  ReactFC,
+  RecursionField,
+  useField,
+  useFieldSchema,
+} from '@muidea/formily-react'
+import { clone, isArr, isBool, isUndef } from '@muidea/formily-shared'
+import { Badge, Pagination, Select, Space, Table } from 'antd'
+import { PaginationProps } from 'antd/lib/pagination'
+import { SelectProps } from 'antd/lib/select'
+import { ColumnProps, TableProps } from 'antd/lib/table'
+import cls from 'classnames'
+import React, {
+  createContext,
+  Fragment,
+  useCallback,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
 import { ArrayBase, ArrayBaseMixins, IArrayBaseProps } from '../array-base'
 import { EditDialog } from '../array-item-dialog'
+import {
+  SortableContainer,
+  SortableElement,
+  usePrefixCls,
+} from '../__builtins__'
 
 interface ObservableColumnSource {
   field: GeneralField
@@ -58,8 +67,8 @@ type ComposedArrayTable = React.FC<
   React.PropsWithChildren<TableProps<any> & IArrayBaseProps>
 > &
   ArrayBaseMixins & {
-  Column?: React.FC<React.PropsWithChildren<ColumnProps<any>>>
-}
+    Column?: React.FC<React.PropsWithChildren<ColumnProps<any>>>
+  }
 
 interface PaginationAction {
   totalPage?: number
@@ -97,7 +106,8 @@ const useArrayTableSources = () => {
       const name = schema['x-component-props']?.['dataIndex'] || schema['name']
       const field = arrayField.query(arrayField.address.concat(name)).take()
       // @ts-ignore
-      const columnProps = field?.component?.[1] || schema['x-component-props'] || {}
+      const columnProps =
+        field?.component?.[1] || schema['x-component-props'] || {}
       const display = field?.display || schema['x-display'] || 'visible'
       return [
         {
@@ -473,8 +483,7 @@ const Copy: ArrayBaseMixins['Copy'] = (props) => {
 }
 ArrayTable.Copy = Copy
 
-
-const Remove : ArrayBaseMixins['Remove']= (props:any) => {
+const Remove: ArrayBaseMixins['Remove'] = (props: any) => {
   const index = ArrayBase.useIndex(props.index)
   const self = useField()
   const array = ArrayBase.useArray()
@@ -496,7 +505,7 @@ const Remove : ArrayBaseMixins['Remove']= (props:any) => {
 }
 ArrayTable.Remove = Remove
 
-const Edit: ArrayBaseMixins['Edit'] = (props:any) => {
+const Edit: ArrayBaseMixins['Edit'] = (props: any) => {
   const index = ArrayBase.useIndex(props.index)
   const self = useField()
   const array = ArrayBase.useArray()
