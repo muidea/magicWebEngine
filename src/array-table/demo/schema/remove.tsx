@@ -34,7 +34,7 @@ const removeSchema = {
       }
     },
     addr: {
-      type: 'string',
+      type: 'object',
       title: '地址',
       required: true,
       'x-decorator': 'FormItem',
@@ -45,7 +45,8 @@ const removeSchema = {
         fieldNames: {
           label: 'name',
           value: 'id',
-        }
+        },
+        labelInValue: true,
       },
       enum: warehoseList,
     },

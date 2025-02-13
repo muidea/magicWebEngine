@@ -11,6 +11,27 @@ const tagRender = (val:any) =>{
   return  <Tag>{val.name}</Tag>
 }
 
+const warehoseList = [
+  {
+    id: 1,
+    name: '仓库1',
+    addr: '地址1',
+    description: '描述1',
+  },
+  {
+    id: 2,
+    name: '仓库2',
+    addr: '地址2',
+    description: '描述2',
+  },
+  {
+    id: 3,
+    name: '仓库3',
+    addr: '地址3',
+    description: '描述3',
+  }
+]
+
 const getSchema = ( loading: boolean,createFunc: actionFunc, removeFunc: actionFunc, updateFunc:actionFunc ) => {
   return {
     type: 'object',
@@ -93,11 +114,15 @@ const getSchema = ( loading: boolean,createFunc: actionFunc, removeFunc: actionF
               },
               properties: {
                 addr: {
-                  type: 'string',
+                  type: 'object',
                   'x-read-pretty': true,
-                  'x-component': 'PreviewText',
+                  'x-component': 'PreviewText.Select',
                   'x-component-props':{
-                    valueRender: tagRender,
+                    labelInValue: true,
+                    fieldNames: {
+                      label: 'name',
+                      value: 'id',
+                    },            
                   }
                 },
               },
