@@ -1,14 +1,27 @@
+const warehoseList = [
+  {
+    id: 1,
+    name: '仓库1',
+    addr: '地址1',
+    description: '描述1',
+  },
+  {
+    id: 2,
+    name: '仓库2',
+    addr: '地址2',
+    description: '描述2',
+  },
+  {
+    id: 3,
+    name: '仓库3',
+    addr: '地址3',
+   description: '描述3',
+  }
+]
+
 const updateSchema = {
   type: 'object',
   properties: {
-    code: {
-      type: 'string',
-      title: '编号',
-      required: true,
-      'x-decorator': 'FormItem',
-      'x-component': 'Input',
-      'x-read-pretty': true,
-    },
     name: {
       type: 'string',
       title: '名称',
@@ -18,6 +31,17 @@ const updateSchema = {
       'x-component-props': {
         placeholder: "请输入仓库名称",
       }
+    },
+    addr: {
+      type: 'string',
+      title: '地址',
+      required: true,
+      'x-decorator': 'FormItem',
+      'x-component': 'ObjectSelect',
+      'x-component-props': {
+        placeholder: "请输入仓库地址",
+      },
+      enum: warehoseList,
     },
     description: {
       type: 'string',

@@ -1,9 +1,15 @@
+import {Tag} from 'antd';
+import React from 'react';
+
 import { removeSchema, removeTitle } from "./remove"
 import { copySchema, copyTitle } from "./copy"
 import { updateSchema, updateTitle } from "./update"
 import { createSchema, createTitle } from "./create"
 
 declare type actionFunc = (value:any) => void
+const tagRender = (val:any) =>{
+  return  <Tag>{val.name}</Tag>
+}
 
 const getSchema = ( loading: boolean,createFunc: actionFunc, removeFunc: actionFunc, updateFunc:actionFunc ) => {
   return {
@@ -80,6 +86,23 @@ const getSchema = ( loading: boolean,createFunc: actionFunc, removeFunc: actionF
               },
             },
             column_5: {
+              type: 'void',
+              'x-component': 'ArrayTable.Column',
+              'x-component-props': {
+                title: '地址',
+              },
+              properties: {
+                addr: {
+                  type: 'string',
+                  'x-read-pretty': true,
+                  'x-component': 'PreviewText',
+                  'x-component-props':{
+                    valueRender: tagRender,
+                  }
+                },
+              },
+            },
+            column_6: {
               type: 'void',
               'x-component': 'ArrayTable.Column',
               'x-component-props': {

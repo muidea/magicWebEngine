@@ -2,6 +2,7 @@ import React from "react"
 import { FormItem } from "../../form-item"
 import { Form } from "../../form"
 import { PreviewText } from "../../preview-text"
+import { Select, ObjectSelect } from "../../select"
 import  { ArrayTable } from "../index"
 import { createForm } from "@muidea/formily-core"
 import { createSchemaField } from "@muidea/formily-react"
@@ -26,6 +27,12 @@ export default () => {
         code: '1001',
         name: 'test Name',
         description: 'test description',
+        addr: {
+          id: 3,
+          name: '仓库3',
+          addr: '地址3',
+         description: '描述3',
+        },
       }],
     }
   }
@@ -35,6 +42,8 @@ export default () => {
     components: {
       FormItem,
       PreviewText,
+      Select,
+      ObjectSelect,
       ArrayTable,
     },
   })

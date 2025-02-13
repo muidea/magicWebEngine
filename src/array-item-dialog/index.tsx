@@ -8,7 +8,7 @@ import { FormLayout } from '../form-layout'
 import { NumberPicker } from '../number-picker'
 import { Password } from '../password'
 import { Radio } from '../radio'
-import { Select } from '../select'
+import { Select, ObjectSelect } from '../select'
 import { Switch } from '../switch'
 import { TimePicker } from '../time-picker'
 import { Transfer } from '../transfer'
@@ -35,6 +35,7 @@ const SchemaField = createSchemaField({
     NumberPicker,
     Radio,
     Select,
+    ObjectSelect,
     Switch,
     TimePicker,
     Transfer,
