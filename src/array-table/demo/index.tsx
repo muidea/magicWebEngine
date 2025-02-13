@@ -23,7 +23,7 @@ export default () => {
 
   const getInitialValues = () => {
     return {
-      values: [{
+      items: [{
         code: '1001',
         name: 'test Name',
         description: 'test description',

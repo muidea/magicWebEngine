@@ -36,8 +36,9 @@ const getSchema = ( loading: boolean,createFunc: actionFunc, removeFunc: actionF
   return {
     type: 'object',
     properties: {
-      values: {
+      items: {
         type: 'array',
+        'x-decorator': 'FormItem',
         'x-component': 'ArrayTable',
         'x-component-props': {
           loading: loading,
@@ -72,6 +73,7 @@ const getSchema = ( loading: boolean,createFunc: actionFunc, removeFunc: actionF
                 code: {
                   type: 'string',
                   default: '',
+                  'x-read-pretty': true,
                   'x-component': 'PreviewText',
                 },
               },
@@ -85,6 +87,7 @@ const getSchema = ( loading: boolean,createFunc: actionFunc, removeFunc: actionF
               properties: {
                 name: {
                   type: 'string',
+                  'x-read-pretty': true,
                   'x-component': 'PreviewText',
                 },
               },
@@ -98,6 +101,7 @@ const getSchema = ( loading: boolean,createFunc: actionFunc, removeFunc: actionF
               properties: {
                 description: {
                   type: 'string',
+                  'x-read-pretty': true,
                   'x-component': 'PreviewText',
                 },
               },
@@ -111,9 +115,14 @@ const getSchema = ( loading: boolean,createFunc: actionFunc, removeFunc: actionF
               properties: {
                 addr: {
                   type: 'object',
+                  'x-read-pretty': true,
                   'x-component': 'PreviewText.Select',
                   'x-component-props':{
                     labelInValue: true,
+                    fieldNames: {
+                      label: 'name',
+                      value: 'id',
+                    },            
                   }
                 },
               },
