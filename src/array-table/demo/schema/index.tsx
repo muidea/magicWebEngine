@@ -95,14 +95,7 @@ const getSchema = ( loading: boolean,createFunc: actionFunc, removeFunc: actionF
                 addr: {
                   type: 'object',
                   'x-read-pretty': true,
-                  'x-component': 'PreviewText.Select',
-                  'x-component-props':{
-                    labelInValue: true,
-                    fieldNames: {
-                      label: 'name',
-                      value: 'id',
-                    },            
-                  }
+                  'x-component': 'PreviewText.ObjectSelect',
                 },
               },
             },

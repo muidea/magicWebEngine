@@ -13,8 +13,9 @@ import { SelectProps } from 'antd/lib/select'
 import { TimePickerProps, TimeRangePickerProps } from 'antd/lib/time-picker'
 import { TreeSelectProps } from 'antd/lib/tree-select'
 import cls from 'classnames'
-import React, { createContext, useContext, useMemo } from 'react'
+import React, { createContext, useContext } from 'react'
 import { formatMomentValue, usePrefixCls } from '../__builtins__'
+import { ObjectSelectProps } from '../select'
 
 const PlaceholderContext = createContext<React.ReactNode>('N/A')
 
@@ -70,11 +71,24 @@ const Select: React.FC<React.PropsWithChildren<SelectProps<any>>> = observer(
       ? props.options
       : []
     const placeholder = usePlaceholder()
+    const convertValue = (val: any): any => {
+      if (!isValid(val) || typeof val !== 'object') {
+        return val
+      }
+
+      const labelKey = props.fieldNames?.label || 'label'
+      const valueKey = props.fieldNames?.value || 'value'
+      return {
+        label: val[labelKey],
+        value: val[valueKey],
+      }
+    }
+
     const getSelected = () => {
       const value = props.value
       if (props.mode === 'multiple' || props.mode === 'tags') {
         if (props.labelInValue) {
-          return isArr(value) ? value : []
+          return isArr(value) ? value.map(convertValue) : []
         } else {
           return isArr(value)
             ? value.map((val) => ({ label: val, value: val }))
@@ -82,7 +96,7 @@ const Select: React.FC<React.PropsWithChildren<SelectProps<any>>> = observer(
         }
       } else {
         if (props.labelInValue) {
-          return isValid(value) ? [value] : []
+          return isValid(value) ? [convertValue(value)] : []
         } else {
           return isValid(value) ? [{ label: value, value }] : []
         }
@@ -111,6 +125,81 @@ const Select: React.FC<React.PropsWithChildren<SelectProps<any>>> = observer(
     }
     return (
       <div className={cls(prefixCls, props.className)} style={props.style}>
+        {getLabels()}
+      </div>
+    )
+  }
+)
+
+const ObjectSelect: React.FC<React.PropsWithChildren<ObjectSelectProps<any>>> = observer(
+  ({
+    valueProp = 'id',
+    labelProp = 'name',
+    objectValue = true,
+    value: outerValue,
+    onChange,
+    ...rest
+  }: ObjectSelectProps<any>) => {
+    const field = useField<Field>()
+    const prefixCls = usePrefixCls('form-text', rest)
+    const dataSource: any[] = field?.dataSource?.length
+      ? field.dataSource
+      : rest?.options?.length
+      ? rest.options
+      : []
+    const placeholder = usePlaceholder()
+    const convertValue = (val: any): any => {
+      if (!isValid(val) || typeof val !== 'object') {
+        return val
+      }
+
+      return {
+        label: val[labelProp],
+        value: val[valueProp],
+      }
+    }
+
+    const getSelected = () => {
+      const value = outerValue
+      if (rest.mode === 'multiple' || rest.mode === 'tags') {
+        if (objectValue) {
+          return isArr(value) ? value.map(convertValue) : []
+        } else {
+          return isArr(value)
+            ? value.map((val) => ({ label: val, value: val }))
+            : []
+        }
+      } else {
+        if (objectValue) {
+          return isValid(value) ? [convertValue(value)] : []
+        } else {
+          return isValid(value) ? [{ label: value, value }] : []
+        }
+      }
+    }
+
+    const getLabel = (target: any) => {
+      return (
+        dataSource?.find((item) => {
+          return item[valueProp] == target?.value
+        })?.[labelProp] ||
+        target.label ||
+        placeholder
+      )
+    }
+
+    const getLabels = () => {
+      const selected = getSelected()
+      if (!selected.length) return placeholder
+      if (selected.length === 1) {
+        return <Tag> {getLabel(selected[0])}</Tag>
+      }
+      return selected.map((item, key) => {
+        return <Tag key={key}>{getLabel(item)}</Tag>
+      })
+    }
+    return (
+      <div className={cls(prefixCls, rest.className)} style={rest.style}>
         {getLabels()}
       </div>
     )
@@ -310,6 +399,7 @@ const Text = (props: React.PropsWithChildren<any>) => {
 
 Text.Input = Input
 Text.Select = Select
+Text.ObjectSelect = ObjectSelect
 Text.TreeSelect = TreeSelect
 Text.Cascader = Cascader
 Text.DatePicker = DatePicker
