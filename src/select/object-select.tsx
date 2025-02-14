@@ -1,7 +1,7 @@
 import { Select as AntdSelect, SelectProps } from 'antd'
 import React, { useMemo } from 'react'
 
-export interface ObjectSelectProps<T>
+interface ObjectSelectProps<T>
   extends Omit<SelectProps<any>, 'options' | 'onChange' | 'value'> {
   options: T[]
   valueProp?: keyof T
@@ -55,4 +55,4 @@ function ObjectSelect<T extends Record<string, any>>({
   )
 }
 
-export { ObjectSelect }
+export { ObjectSelectProps, ObjectSelect }

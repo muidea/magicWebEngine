@@ -3,7 +3,8 @@ import { connect, mapProps, mapReadPretty } from '@muidea/formily-react'
 import { Select as AntdSelect } from 'antd'
 import React from 'react'
 import { PreviewText } from '../preview-text'
-import { ObjectSelect as AntdObjectSelect, ObjectSelectProps } from './object-select'
+import { ObjectSelect as AntdObjectSelect } from './object-select'
+import type { ObjectSelectProps } from './object-select'
 
 const mapSelectProps = mapProps(
   {

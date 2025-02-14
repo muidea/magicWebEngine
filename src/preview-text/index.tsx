@@ -15,7 +15,7 @@ import { TreeSelectProps } from 'antd/lib/tree-select'
 import cls from 'classnames'
 import React, { createContext, useContext } from 'react'
 import { formatMomentValue, usePrefixCls } from '../__builtins__'
-import { ObjectSelectProps } from '../select'
+import type { ObjectSelectProps } from '../select'
 
 const PlaceholderContext = createContext<React.ReactNode>('N/A')
 
