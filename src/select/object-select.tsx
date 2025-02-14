@@ -47,6 +47,7 @@ function ObjectSelect<T extends Record<string, any>>({
   return (
     <AntdSelect
       {...rest}
+      labelInValue={objectValue}
       value={convertedValue}
       onChange={handleChange}
       options={selectOptions}
